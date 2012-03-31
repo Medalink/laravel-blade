@@ -11,10 +11,6 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>include</key>
-			<string>text.html.basic</string>
-		</dict>
-		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -56,22 +52,24 @@
 			<key>contentName</key>
 			<string>compiler.params.blade</string>
 			<key>end</key>
-			<string>\)</string>
+			<string>\)$</string>
 			<key>name</key>
 			<string>call.compiler.blade</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-				<dict>
 					<key>comment</key>
 					<string>Operands: as = + - &gt; &lt;</string>
 					<key>match</key>
-					<string>\b(as)\b|([=&gt;&lt;])</string>
+					<string>\b(as)\b|([=&gt;&lt;\+-])</string>
 					<key>name</key>
 					<string>keyword.operand.blade</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>[0-9]</string>
+					<key>name</key>
+					<string>constant.numeric.blade</string>
 				</dict>
 				<dict>
 					<key>comment</key>
@@ -83,21 +81,21 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>[0-9]</string>
-					<key>name</key>
-					<string>constant.numeric.blade</string>
-				</dict>
-				<dict>
-					<key>match</key>
 					<string>\'([A-Za-z_0-9. ]+)\'</string>
 					<key>name</key>
 					<string>string.compiler.parameter.blade</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>([A-Za-z_]+)</string>
+					<string>[A-Za-z_]+</string>
 					<key>name</key>
-					<string>support.function.blade</string>
+					<string>support.function.compiler.inside.function.blade</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\((?=(|\s*|)\))</string>
+					<key>name</key>
+					<string>support.function.compiler.inside.function.blade</string>
 				</dict>
 			</array>
 		</dict>
@@ -144,7 +142,7 @@
 					<key>comment</key>
 					<string>Operands: as = + - &gt; &lt;</string>
 					<key>match</key>
-					<string>\b(as)\b|([=&gt;&lt;\+])</string>
+					<string>\b(as)\b|([=&gt;&lt;\+-])</string>
 					<key>name</key>
 					<string>keyword.operand.blade</string>
 				</dict>
@@ -169,6 +167,10 @@
 					<string>string.compiler.parameter.blade</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>text.html.basic</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
