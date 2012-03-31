@@ -6,7 +6,7 @@ This is a Blade syntax highlighter for use with [Laravels](http://www.laravel.co
 
 Place Blade.tmLanguage in Sublime Text 2/Packages/User
 
-# For directory location see http://sublimetext.info/docs/en/basic_concepts.html
+For directory location see http://sublimetext.info/docs/en/basic_concepts.html
 
 Restart Sublime Text 2.
 
