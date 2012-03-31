@@ -111,6 +111,11 @@
 					<key>name</key>
 					<string>support.constant.language.echo.wrapper.blade</string>
 				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.language.echo.wrapper.blade</string>
+				</dict>
 			</dict>
 			<key>comment</key>
 			<string>PHP echo wrapper</string>
@@ -120,6 +125,11 @@
 			<string>(\})(\})</string>
 			<key>endCaptures</key>
 			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.language.echo.wrapper.close.blade</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
