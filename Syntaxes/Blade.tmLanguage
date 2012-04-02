@@ -56,15 +56,11 @@
 			<key>contentName</key>
 			<string>compiler.params.blade</string>
 			<key>end</key>
-			<string>\)</string>
+			<string>\)$</string>
 			<key>name</key>
 			<string>call.compiler.blade</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
 				<dict>
 					<key>comment</key>
 					<string>Operands: as = + - &gt; &lt;</string>
