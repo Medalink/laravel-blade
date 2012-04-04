@@ -1,0 +1,80 @@
+{ "name": "Blade",
+  "scopeName": "source.blade",
+  "fileTypes": ["blade.php", "blade"],
+	"patterns": [
+		{ "include": "text.html.basic" },
+    { 
+      "name": "call.compiler.end.blade",
+      "comment": "End compiler tags: @yield_section",
+		  "match": "(\\@)((end(|forelse)(|foreach)(|section)(|for)(|while)(|if))|render(|_each)|parent|yield_section|empty|else)$",
+		  "captures": {
+		      "1": { "name": "support.constant.language.compiler.tag.blade" },
+		      "2": { "name": "entity.name.tag.compiler.blade" }
+		  }
+    },
+		{ "name": "call.compiler.blade",
+			"comment": "Compiler tags with parameters: @section()",
+		  "begin": "(\\@)\\b(include|section|layout|yield|if|elseif|foreach|forelse|for|while)\\b(?=(|\\s*|)\\()",
+		  "beginCaptures": {
+		      "1": { "name": "support.constant.language.compiler.tag.blade" },
+		      "2": { "name": "entity.name.tag.compiler.blade" }
+		  },
+		  "end": "\\)",
+
+		  "patterns": [
+		     {  "name": "keyword.operand.blade",
+		     		"comment": "Operands: as = + - > <",
+		        "match": "\\b(as)\\b|([=><\\+-])"
+		     },
+		     {  "name": "Variable.blade",
+		     		"comment": "Variable names $somthing",
+		        "match": "\\$([A-Za-z_.]+)"
+		     },
+		     {  "name": "constant.numeric.blade",
+		        "match": "[0-9]"
+		     },
+		     {  "name": "string.compiler.parameter.blade",
+		        "match": "\\'([A-Za-z_0-9. ]+)\\'"
+		     },
+		     {  "name": "support.function.blade",
+		        "match": "([A-Za-z_]+)"
+		     }
+		  ],
+		  "contentName": "compiler.params.blade"
+		},
+		{ "name": "call.echo.wrapper.blade",
+			"comment": "PHP echo wrapper",
+		  "begin": "(\\{)(\\{)",
+		  "beginCaptures": {
+		  	  "1": { "name": "support.constant.language.echo.wrapper.blade" },
+		      "2": { "name": "support.constant.language.echo.wrapper.blade" }
+		  },
+		  "end": "(\\})(\\})",
+		  "endCaptures": {
+		  	  "1": { "name": "support.constant.language.echo.wrapper.close.blade" },
+		      "2": { "name": "support.constant.language.echo.wrapper.close.blade" }
+		  },
+		  "patterns": [
+		     {  "name": "keyword.operand.blade",
+		     		"comment": "Operands: as = + - > <",
+		        "match": "\\b(as)|(equal)\\b|([\\!=><\\+-])"
+		     },
+		     {  "name": "variable.name.blade",
+		     		"comment": "Variable names $somthing",
+		        "match": "\\$([A-Za-z_.]+)"
+		     },
+		     {  "name": "constant.numeric.blade",
+		        "match": "[0-9]"
+		     },
+		     {  "name": "string.compiler.parameter.blade",
+		        "match": "\\'([A-Za-z_0-9. ]+)\\'"
+		     },
+		     {  "name": "constant.language.compiler.parameter.blade",
+		        "match": "\\b(true|TRUE)|(false|FALSE)\\b"
+		     }
+		  ],
+		  "contentName": "echo.wrapper.params.blade"
+		}
+	],
+  "uuid": "70911d1c-0a7c-4cb5-9771-d71d23d8ab1a"
+}
