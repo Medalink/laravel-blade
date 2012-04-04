@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>blade.php</string>
+		<string>blade</string>
 	</array>
 	<key>name</key>
 	<string>Blade</string>
