@@ -4,6 +4,8 @@ This is a Blade syntax highlighter for use with [Laravels](http://www.laravel.co
 
 ### How to install w/Sublime Package Manager
 
-Add https://github.com/Medalink/Laravel-Blade to your repository list via the Package: Add Repository
+Search for Blade and install it, it's just that simple.
 
-Search for Blade and install it.
+### Manual Install
+
+Drop the Blade.tmLanguage into your Packages folder.
