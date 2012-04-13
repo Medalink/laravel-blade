@@ -503,6 +503,10 @@
         </dict>
         <dict>
             <key>include</key>
+            <string>#blade-comment-multi-tags</string>
+        </dict>
+        <dict>
+            <key>include</key>
             <string>#blade-variable-tags</string>
         </dict>
         <dict>
@@ -534,6 +538,10 @@
                 <dict>
                     <key>include</key>
                     <string>#blade-comment-tags</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-comment-multi-tags</string>
                 </dict>
                 <dict>
                     <key>include</key>
@@ -714,9 +722,25 @@
             <string>\@((end(|forelse)(|foreach)(|section)(|for)(|while)(|if))|render(|_each)|parent|yield_section|empty|else)$</string>
         </dict>
 
-        <!-- Blade Comments -->
-        <!-- {{- Comment -}} -->
+        <!-- Blade Single Line Comment -->
+        <!-- {{-- Comment -->
         <key>blade-comment-tags</key>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>comment.block.blade</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\{\{--(.+?)(--\}\})?\n</string>
+        </dict>
+
+        <!-- Blade Multiline Comment -->
+        <!-- {{- Comment -}} -->
+        <key>blade-comment-multi-tags</key>
         <dict>
             <key>begin</key>
             <string>\{\{--</string>
