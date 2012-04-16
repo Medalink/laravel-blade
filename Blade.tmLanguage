@@ -624,7 +624,7 @@
             <array>
                 <dict>
                     <key>include</key>
-                    <string>#blade-instantiation</string>
+                    <string>#blade-classes</string>
                 </dict>
                 <dict>
                     <key>include</key>
@@ -705,19 +705,14 @@
             </array>
         </dict>
 
-        <!-- Blade Instantiation -->
-        <!-- Class::function() or class() -->
-        <key>blade-instantiation</key>
+        <!-- Blade Classes -->
+        <!-- Class:: -->
+        <key>blade-classes</key>
         <dict>
             <key>begin</key>
-            <string>(.+?)(::)(.+?\()</string>
+            <string>(.+?)(::)</string>
             <key>beginCaptures</key>
             <dict>
-                <key>0</key>
-                <dict>
-                    <key>name</key>
-                    <string>plain.white.inst.start.blade</string>
-                </dict>
                 <key>1</key>
                 <dict>
                     <key>name</key>
@@ -741,29 +736,6 @@
             </dict>
             <key>name</key>
             <string>plain.white.inst.blade</string>
-            <key>patterns</key>
-            <array>
-                <dict>
-                    <key>include</key>
-                    <string>#blade-constants</string>
-                </dict>
-                <dict>
-                    <key>include</key>
-                    <string>#blade-operators</string>
-                </dict>
-                <dict>
-                    <key>include</key>
-                    <string>#blade-strings</string>
-                </dict>
-                <dict>
-                    <key>include</key>
-                    <string>#blade-arrays</string>
-                </dict>
-                <dict>
-                    <key>include</key>
-                    <string>#blade-hashes</string>
-                </dict>
-            </array>
         </dict>
 
         <!-- Blade Compiler Closing Tags -->
