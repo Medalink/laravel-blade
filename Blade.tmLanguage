@@ -654,7 +654,7 @@
         <key>blade-compiler-tags</key>
         <dict>
             <key>begin</key>
-            <string>\@\b(include|section|layout|yield|if|elseif|foreach|forelse|for|while)\b(?=(|\s*|)\()</string>
+            <string>\@\b(include|section|layout|yield|if|elseif|foreach|forelse|for|while|render|unless)\b(?=(|\s*|)\()</string>
             <key>beginCaptures</key>
             <dict>
                 <key>0</key>
@@ -706,36 +706,24 @@
         </dict>
 
         <!-- Blade Classes -->
-        <!-- Class:: -->
+        <!-- {{ Class:: }} -->
         <key>blade-classes</key>
         <dict>
-            <key>begin</key>
-            <string>(.+?)(::)</string>
-            <key>beginCaptures</key>
+            <key>captures</key>
             <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.tag.static.blade</string>
+                </dict>
                 <key>1</key>
                 <dict>
                     <key>name</key>
                     <string>support.constant.echo.static.blade</string>
                 </dict>
-                <key>2</key>
-                <dict>
-                    <key>name</key>
-                    <string>entity.name.tag.static.blade</string>
-                </dict>
             </dict>
-            <key>end</key>
-            <string>\)</string>
-            <key>endCaptures</key>
-            <dict>
-                <key>0</key>
-                <dict>
-                    <key>name</key>
-                    <string>plain.white.inst.end.blade</string>
-                </dict>
-            </dict>
-            <key>name</key>
-            <string>plain.white.inst.blade</string>
+            <key>match</key>
+            <string>(.+?)(::)</string>
         </dict>
 
         <!-- Blade Compiler Closing Tags -->
@@ -756,7 +744,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>\@((end(|forelse)(|foreach)(|section)(|for)(|while)(|if))|render(|_each)|parent|yield_section|empty|else)$</string>
+            <string>\@((end(|forelse)(|foreach)(|section)(|for)(|while)(|if))|render(|_each)|parent|yield_section|empty|else|endunless)$</string>
         </dict>
 
         <!-- Blade Single Line Comment -->
