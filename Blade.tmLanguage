@@ -808,7 +808,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>\@((end(|forelse)(|foreach)(|section)(|for)(|while)(|if))|render(|_each)|parent|yield_section|empty|else|endunless)$</string>
+            <string>\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else)</string>
         </dict>
 
         <!-- Blade Single Line Comment -->
