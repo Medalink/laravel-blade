@@ -521,6 +521,10 @@
             <key>include</key>
             <string>#blade-compiler-close-tags</string>
         </dict>
+        <dict>
+            <key>include</key>
+            <string>#blade-extended-compiler-close-tags</string>
+        </dict>
         <!-- Blade End -->
     </array>
     <key>repository</key>
@@ -562,6 +566,10 @@
                 <dict>
                     <key>include</key>
                     <string>#blade-compiler-close-tags</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-extended-compiler-close-tags</string>
                 </dict>
                 <!-- Blade End -->
                 
@@ -809,6 +817,27 @@
             </dict>
             <key>match</key>
             <string>\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else)</string>
+        </dict>
+
+        <!-- Blade Extended Compiler Closing Tags -->
+        <!-- @ -->
+        <key>blade-extended-compiler-close-tags</key>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.tag.static.blade</string>
+                </dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.tag.compiler.name.blade</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\@\b(.+)\b(?=(|\s*|))</string>
         </dict>
 
         <!-- Blade Single Line Comment -->
