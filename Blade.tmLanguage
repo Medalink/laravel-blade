@@ -711,19 +711,19 @@
         <dict>
             <key>captures</key>
             <dict>
-                <key>0</key>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>support.class.blade</string>
+                </dict>
+                <key>2</key>
                 <dict>
                     <key>name</key>
                     <string>entity.name.tag.static.blade</string>
                 </dict>
-                <key>1</key>
-                <dict>
-                    <key>name</key>
-                    <string>support.constant.echo.static.blade</string>
-                </dict>
             </dict>
             <key>match</key>
-            <string>(.+?)(::)</string>
+            <string>(.+?)(::)(.+?)(\()</string>
         </dict>
 
         <!-- Blade Compiler Closing Tags -->
@@ -818,74 +818,88 @@
         <dict>
             <key>patterns</key>
             <array>
-                <!-- Arithmetic -->
                 <dict>
-                    <key>captures</key>
-                    <dict>
-                        <key>1</key>
-                        <dict>
-                            <key>name</key>
-                            <string>keyword.operator.arithmetic.blade</string>
-                        </dict>
-                    </dict>
                     <key>match</key>
-                    <string>(?&lt;=\s)(\+|-|\*|/|%|//)(?=\s)</string>
+                    <string>=&gt;</string>
+                    <key>name</key>
+                    <string>keyword.operator.key.php</string>
                 </dict>
-                
-                <!-- Assignment -->
                 <dict>
-                    <key>captures</key>
-                    <dict>
-                        <key>1</key>
-                        <dict>
-                            <key>name</key>
-                            <string>keyword.operator.assignment.blade</string>
-                        </dict>
-                    </dict>
                     <key>match</key>
-                    <string>(?&lt;=\s)(=|~)(?=\s)</string>
+                    <string>&amp;(?=\s*(\$|new|[A-Za-z_][A-Za-z_0-9]+(?=\s*\()))</string>
+                    <key>name</key>
+                    <string>storage.modifier.reference.php</string>
                 </dict>
-                
-                <!-- Bitwise -->
                 <dict>
-                    <key>captures</key>
-                    <dict>
-                        <key>1</key>
-                        <dict>
-                            <key>name</key>
-                            <string>keyword.operator.bitwise.blade</string>
-                        </dict>
-                    </dict>
                     <key>match</key>
-                    <string>(?&lt;=\s)(&amp;|\||\^)(?=\s)</string>
+                    <string>;</string>
+                    <key>name</key>
+                    <string>punctuation.terminator.expression.php</string>
                 </dict>
-                
-                <!-- Comparison -->
                 <dict>
-                    <key>captures</key>
-                    <dict>
-                        <key>1</key>
-                        <dict>
-                            <key>name</key>
-                            <string>keyword.operator.comparison.blade</string>
-                        </dict>
-                    </dict>
                     <key>match</key>
-                    <string>(?&lt;=\s)((?:!|=)=|&lt;=?|&gt;=?|i(?:s|n))(?=\s)</string>
+                    <string>(@)</string>
+                    <key>name</key>
+                    <string>keyword.operator.error-control.php</string>
                 </dict>
-                
-                <!-- Logical -->
+                <dict>
+                    <key>match</key>
+                    <string>(\-\-|\+\+)</string>
+                    <key>name</key>
+                    <string>keyword.operator.increment-decrement.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(\-|\+|\*|/|%)</string>
+                    <key>name</key>
+                    <string>keyword.operator.arithmetic.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(?i)(!|&amp;&amp;|\|\|)|\b(and|or|xor|as)\b</string>
+                    <key>name</key>
+                    <string>keyword.operator.logical.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>&lt;&lt;|&gt;&gt;|~|\^|&amp;|\|</string>
+                    <key>name</key>
+                    <string>keyword.operator.bitwise.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(===|==|!==|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;)</string>
+                    <key>name</key>
+                    <string>keyword.operator.comparison.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(\.=|\.)</string>
+                    <key>name</key>
+                    <string>keyword.operator.string.php</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>=</string>
+                    <key>name</key>
+                    <string>keyword.operator.assignment.php</string>
+                </dict>
                 <dict>
                     <key>captures</key>
                     <dict>
                         <key>1</key>
                         <dict>
                             <key>name</key>
-                            <string>keyword.operator.logical.blade</string>
+                            <string>keyword.operator.type.php</string>
+                        </dict>
+                        <key>2</key>
+                        <dict>
+                            <key>name</key>
+                            <string>support.class.php</string>
                         </dict>
                     </dict>
                     <key>match</key>
-                    <string>(?&lt;=\s)(not|or|and|\?|:)(?=\s)</string>
+                    <string>(?i)\b(instanceof)\b(?:\s+(\w+))?</string>
                 </dict>
             </array>
         </dict>
@@ -953,23 +967,28 @@
         <key>blade-arrays</key>
         <dict>
             <key>begin</key>
-            <string>(?&lt;=[\s\(\{\[:,])\[</string>
+            <string>(array)(\()</string>
             <key>beginCaptures</key>
             <dict>
-                <key>0</key>
+                <key>1</key>
                 <dict>
                     <key>name</key>
-                    <string>punctuation.section.array.begin.blade</string>
+                    <string>support.function.construct.php</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.array.begin.php</string>
                 </dict>
             </dict>
             <key>end</key>
-            <string>\]</string>
+            <string>\)</string>
             <key>endCaptures</key>
             <dict>
                 <key>0</key>
                 <dict>
                     <key>name</key>
-                    <string>punctuation.section.array.end.blade</string>
+                    <string>punctuation.definition.array.end.php</string>
                 </dict>
             </dict>
             <key>patterns</key>
