@@ -515,6 +515,10 @@
         </dict>
         <dict>
             <key>include</key>
+            <string>#blade-extended-compiler-tags</string>
+        </dict>
+        <dict>
+            <key>include</key>
             <string>#blade-compiler-close-tags</string>
         </dict>
         <!-- Blade End -->
@@ -550,6 +554,10 @@
                 <dict>
                     <key>include</key>
                     <string>#blade-compiler-tags</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-extended-compiler-tags</string>
                 </dict>
                 <dict>
                     <key>include</key>
@@ -661,6 +669,62 @@
                 <dict>
                     <key>name</key>
                     <string>support.constant.language.compiler.call.blade</string>
+                </dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.tag.compiler.name.blade</string>
+                </dict>
+            </dict>
+            <key>end</key>
+            <string>\)</string>
+            <key>endCaptures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>compiler.close.blade</string>
+                </dict>
+            </dict>
+            <key>name</key>
+            <string>meta.tag.template.value.blade</string>
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-constants</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-operators</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-strings</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-arrays</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-hashes</string>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- Blade Extended Compiler Tags -->
+        <!-- @() -->
+        <key>blade-extended-compiler-tags</key>
+        <dict>
+            <key>begin</key>
+            <string>\@\b(.+)\b(?=(|\s*|)\()</string>
+            <key>beginCaptures</key>
+            <dict>
+                <key>0</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.tag.static.blade</string>
                 </dict>
                 <key>1</key>
                 <dict>
