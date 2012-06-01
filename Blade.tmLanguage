@@ -795,7 +795,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>(.+?)(::)(.+?)(\()</string>
+            <string>\b(.+?)\b(::)\b(.+?)\b(\()</string>
         </dict>
 
         <!-- Blade Compiler Closing Tags -->
@@ -1101,6 +1101,10 @@
                 <dict>
                     <key>include</key>
                     <string>#blade-strings</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-operators</string>
                 </dict>
             </array>
             <key>name</key>
