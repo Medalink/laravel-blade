@@ -640,10 +640,6 @@
             <array>
                 <dict>
                     <key>include</key>
-                    <string>#blade-classes</string>
-                </dict>
-                <dict>
-                    <key>include</key>
                     <string>#blade-constants</string>
                 </dict>
                 <dict>
@@ -657,6 +653,10 @@
                 <dict>
                     <key>include</key>
                     <string>#blade-arrays</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#blade-classes</string>
                 </dict>
                 <dict>
                     <key>include</key>
