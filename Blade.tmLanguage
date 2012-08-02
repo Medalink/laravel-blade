@@ -795,7 +795,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>\b(.+?)\b(::)\b(.+?)\b(\()</string>
+            <string>\b([^\s]+?)\b(::)\b(.+?)\b(\()</string>
         </dict>
 
         <!-- Blade Compiler Closing Tags -->
