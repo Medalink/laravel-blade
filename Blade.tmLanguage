@@ -146,7 +146,7 @@
             <array>
                 <dict>
                     <key>begin</key>
-                    <string>(DOCTYPE)</string>
+                    <string>(?i:DOCTYPE)</string>
                     <key>captures</key>
                     <dict>
                         <key>1</key>
