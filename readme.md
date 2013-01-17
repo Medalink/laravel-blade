@@ -1,11 +1,11 @@
-## Blade Syntax - tmLanguage file
+## Laravel Blade Syntax Highlighter - tmLanguage
 
-This is a Blade syntax highlighter for use with [Laravels](http://www.laravel.com) blade template engine.
+Designed to work with [Laravels](http://www.laravel.com) Blade template engine.
 
 ### How to install w/Sublime Package Manager
 
-Search for Blade and install it, it's just that simple.
+Search for Laravel Blade and install it, it's just that simple.
 
 ### Manual Install
 
-Drop the Blade.tmLanguage into your Packages folder.
+Drop the laravel-blade.tmLanguage into your Packages folder.
