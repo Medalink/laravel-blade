@@ -1,11 +1,11 @@
-## Laravel Blade Syntax Highlighter - tmLanguage
+## Laravel Blade Syntax Highlighter Source - JSON
 
-Designed to work with [Laravels](http://www.laravel.com) Blade template engine.
+### Requirments
 
-### How to install w/Sublime Package Manager
+You need to install the [AAAPackageDev](https://github.com/SublimeText/AAAPackageDev) to compile JSON to tmLanguage XML format.
 
-Search for Laravel Blade and install it, it's just that simple.
+Note: You can install this w/Sublime Package Manager
 
-### Manual Install
+### Compiling
 
-Drop the laravel-blade.tmLanguage into your Packages folder.
+By default the file should build automatically. If it does not check the Tools > Build System > JSON to tmLanguage.
