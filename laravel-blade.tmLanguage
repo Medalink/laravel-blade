@@ -9,16 +9,28 @@
 		<string>blade</string>
 		<string>blade.php</string>
 	</array>
-	<key>firstLineMatch</key>
-	<string>^#!.*(?&lt;!-)php[0-9]{0,1}\b</string>
-	<key>foldingStartMarker</key>
-	<string>(/\*|\{\s*$|&lt;&lt;&lt;HTML)</string>
-	<key>foldingStopMarker</key>
-	<string>(\*/|^\s*\}|^HTML;)</string>
 	<key>name</key>
 	<string>PHP - Laravel Blade</string>
 	<key>patterns</key>
 	<array>
+		<dict>
+			<key>begin</key>
+			<string>\{\{--(?=(|\s*|))(.+|)(?=(|--\}\}|))</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.php</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Laravel Blade Comments</string>
+			<key>end</key>
+			<string></string>
+			<key>name</key>
+			<string>comment.block.php</string>
+		</dict>
 		<dict>
 			<key>include</key>
 			<string>source.php</string>
