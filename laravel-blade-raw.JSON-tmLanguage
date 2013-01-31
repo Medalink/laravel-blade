@@ -43,7 +43,7 @@
         },
         {
             "comment": "Laravel Blade Stock Compiler Calls",
-            "begin": "\\@\\b(include|section|layout|yield|if|elseif|foreach|forelse|for|while|render|unless)\\b(?=(|\\s*|)\\()",
+            "begin": "\\@\\b(include|section|layout|extends|yield|if|elseif|foreach|forelse|for|while|render|unless)\\b(?=(|\\s*|)\\()",
             "beginCaptures": {
                 "0": {
                     "name": "support.constant.laravel-blade"
@@ -91,7 +91,7 @@
         },
         {
             "comment": "Laravel Blade Stock Compiler Closure",
-            "begin": "\\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else)",
+            "begin": "\\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else|stop)",
             "beginCaptures": {
                 "0": {
                     "name": "support.constant.laravel-blade"
