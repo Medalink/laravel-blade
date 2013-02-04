@@ -91,7 +91,7 @@
         },
         {
             "comment": "Laravel Blade Stock Compiler Closure",
-            "begin": "\\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else|stop)",
+            "begin": "\\@(end(forelse|foreach|each|section|for|while|if|unless)|render(_each)|parent|yield_section|show|empty|else|stop)",
             "beginCaptures": {
                 "0": {
                     "name": "support.constant.laravel-blade"
