@@ -150,7 +150,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@(end(forelse|foreach|section|for|while|if|unless)|render(_each)|parent|yield_section|empty|else|end)</string>
+			<string>\@(end(forelse|foreach|each|section|for|while|if|unless)|render(_each)|each|parent|yield_section|show|empty|else|stop)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
