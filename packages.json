@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "Laravel Blade Highlighter",
+			"description": "Laravel Blade syntax highlighter support for Sublime Text.",
+			"author": "Medalink",
+			"homepage": "https://github.com/Medalink/laravel-blade",
+			"last_modified": "2013-04-09 17:27:18",
+			"platforms": {
+				"*": [
+					{
+						"version": "1.0",
+						"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.0"
+					}
+				]
+			}
+		}
+	]
+}
