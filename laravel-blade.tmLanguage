@@ -21,7 +21,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.php</string>
+					<string>punctuation.definition.comment.laravel-blade.php</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -29,7 +29,7 @@
 			<key>end</key>
 			<string></string>
 			<key>name</key>
-			<string>comment.block.php</string>
+			<string>comment.block.laravel-blade.php</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -3478,7 +3478,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.php.laravel-blade</string>
+	<string>text.html.laravel-blade</string>
 	<key>uuid</key>
 	<string>70911d1c-0a7c-4cb5-9771-d71d23d8ab1a</string>
 </dict>
