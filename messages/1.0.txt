@@ -1,1 +1,0 @@
-Laravel 3 Blade Highlighter Version 1.0.
