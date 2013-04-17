@@ -10,7 +10,7 @@
 			"platforms": {
 				"*": [
 					{
-						"version": "1.0",
+						"version": "1.0.0",
 						"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.0"
 					}
 				]
