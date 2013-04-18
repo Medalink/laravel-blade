@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+
+
+</body>
+<h1>Profile</hi>
+
+<?php
+class Activity {
+    public static function trigger( $user_id = 0, $event = NULL ) {
+        if( empty( $user_id ) )
+            $user_id = Auth::user()->id;
+
+        $data['user_id'] = $user_id;
+        $data['event'] = $event;
+        $data['created_at'] = date( 'Y-m-d H:i:s' );
+        $data['updated_at'] = date( 'Y-m-d H:i:s' );
+
+        $id = DB::table( 'activities' )->insert_get_id( $data );
+
+        if( count() )
+
+        if( !empty( $id ) )
+            return true;
+        else
+            return false;
+    }
+}
+?>
+
+{{ URI::is('blog*') ? 'active' : '' }}
+
+@include( 'user.profile' )
+"aa"
+a'a'a"a"
+<h1>Comments</h1>
+
+<li class="{{ URI::is('blog*') ? 'active' : '' }}">
+<lie class="<?php $id = DB::table( 'activities' )->insert_get_id( $data ); ?>">
+
+@foreach( $comments as $comment )
+    The comment body is {{$comment->body}}.
+@endforeach
+
+@if (count($comments) > 0)
+    I have comments!
+@else
+    I have no comments!
+@endif
+
+@for ($i = 0; $i < count($comments) - 1; $i++)
+    The comment body is {{$comments[$i]}}
+@endfor
+
+@while ($something)
+    I am still looping!
+@endwhile
+
+@forelse ($posts as $post)
+    {{ $post->body }}
+@empty
+    There are not posts in the array!
+@endforelse
+
+<html>
+    <ul class="navigation">
+        @section( 'navigation' )
+            <li <?php echo 'active'; ?>>Nav Item 1</li>
+            <li>Nav Item 2</li>
+        @yield_section
+    </ul>
+
+    <div class="content">
+        @yield('content')
+    </div>
+</html>
+
+@layout('master')
+
+@section('content')
+    Welcome to the profile page!
+@endsection
+
+@layout('master')
+
+@section('navigation')
+    @parent
+    <li>Nav Item 3</li>
+@endsection
+
+@section('content')
+    Welcome to the profile page!
+@endsection
