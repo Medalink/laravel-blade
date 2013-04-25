@@ -25,3 +25,6 @@ Drop the laravel-blade.tmLanguage into your Packages folder.
 The following are a list of packages that conflict with Laravel Blade.
 
 * [HTML for Sublime Text 2](https://github.com/mrmartineau/HTML5)
+
+
+![Laravel Blade Highlighter](http://tge-studio.com/blade/laravel-blade-highlighter.png "Laravel Blade Highlighter")
