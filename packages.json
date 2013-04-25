@@ -4,7 +4,7 @@
 		{
 			"name": "Laravel Blade Highlighter",
 			"description": "Laravel Blade syntax highlighter support for Sublime Text.",
-			"author": "Medalink",
+			"author": "Eric Percifield",
 			"homepage": "https://github.com/Medalink/laravel-blade",
 			"last_modified": "2013-04-09 17:27:18",
 			"platforms": {
