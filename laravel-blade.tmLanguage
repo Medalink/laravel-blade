@@ -74,7 +74,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@\b(include|section|layout|extends|yield|if|elseif|foreach|forelse|for|while|render|unless)\b(?=(|\s*|)\()</string>
+			<string>\@\b(if|elseif|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -150,7 +150,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@(end(forelse|foreach|each|section|for|while|if|unless)|render(_each)|each|parent|yield_section|show|empty|else|stop)</string>
+			<string>\@(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>

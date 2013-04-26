@@ -1,98 +1,65 @@
-<!DOCTYPE html>
+{{-- Echo --}}
+Hello, {{ $name }}.
+
+The current UNIX timestamp is {{ time() }}.
+
+{{-- Echo: Escape Output --}}
+Hello, {{{ $name }}}.
+
+{{-- Define Blade Layout --}}
 <html>
-<head>
-<title>Title of the document</title>
-</head>
+    <body>
+        @section('sidebar')
+            This is the master sidebar.
+        @show
 
-<body>
-
-
-</body>
-<h1>Profile</hi>
-
-<?php
-class Activity {
-    public static function trigger( $user_id = 0, $event = NULL ) {
-        if( empty( $user_id ) )
-            $user_id = Auth::user()->id;
-
-        $data['user_id'] = $user_id;
-        $data['event'] = $event;
-        $data['created_at'] = date( 'Y-m-d H:i:s' );
-        $data['updated_at'] = date( 'Y-m-d H:i:s' );
-
-        $id = DB::table( 'activities' )->insert_get_id( $data );
-
-        if( count() )
-
-        if( !empty( $id ) )
-            return true;
-        else
-            return false;
-    }
-}
-?>
-
-{{ URI::is('blog*') ? 'active' : '' }}
-
-@include( 'user.profile' )
-"aa"
-a'a'a"a"
-<h1>Comments</h1>
-
-<li class="{{ URI::is('blog*') ? 'active' : '' }}">
-<lie class="<?php $id = DB::table( 'activities' )->insert_get_id( $data ); ?>">
-
-@foreach( $comments as $comment )
-    The comment body is {{$comment->body}}.
-@endforeach
-
-@if (count($comments) > 0)
-    I have comments!
-@else
-    I have no comments!
-@endif
-
-@for ($i = 0; $i < count($comments) - 1; $i++)
-    The comment body is {{$comments[$i]}}
-@endfor
-
-@while ($something)
-    I am still looping!
-@endwhile
-
-@forelse ($posts as $post)
-    {{ $post->body }}
-@empty
-    There are not posts in the array!
-@endforelse
-
-<html>
-    <ul class="navigation">
-        @section( 'navigation' )
-            <li <?php echo 'active'; ?>>Nav Item 1</li>
-            <li>Nav Item 2</li>
-        @yield_section
-    </ul>
-
-    <div class="content">
-        @yield('content')
-    </div>
+        <div class="container">
+            @yield('content')
+        </div>
+    </body>
 </html>
 
-@layout('master')
+{{-- Use Blade Layout --}}
+@extends('layouts.master')
 
-@section('content')
-    Welcome to the profile page!
-@endsection
-
-@layout('master')
-
-@section('navigation')
+@section('sidebar')
     @parent
-    <li>Nav Item 3</li>
-@endsection
+
+    <p>This is appended to the master sidebar.</p>
+@stop
 
 @section('content')
-    Welcome to the profile page!
-@endsection
+    <p>This is my body content.</p>
+@stop
+
+{{-- If Statement --}}
+@if (count($records) > 0)
+    I have records!
+@else
+    I don't have any records!
+@endif
+
+@unless (Auth::check())
+    You are not signed in.
+@endunless
+
+{{-- Loops --}}
+@for ($i = 0; $i < 10; $i++)
+    The current value is {{ $i }}
+@endfor
+
+@foreach ($users as $user)
+    <p>This is user {{ $user->id }}</p>
+@endforeach
+
+@while (true)
+    <p>I'm looping forever.</p>
+@endwhile
+
+{{-- Include --}}
+@include('view.name')
+
+{{-- Language --}}
+@lang('language.line')
+
+@choice('language.line', 1);

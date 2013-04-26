@@ -6,12 +6,12 @@
 			"description": "Laravel Blade syntax highlighter support for Sublime Text.",
 			"author": "Eric Percifield",
 			"homepage": "https://github.com/Medalink/laravel-blade",
-			"last_modified": "2013-04-09 17:27:18",
+			"last_modified": "2013-04-26 16:43:35",
 			"platforms": {
 				"*": [
 					{
-						"version": "1.0.0",
-						"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.0.0"
+						"version": "1.1.0",
+						"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.1.0"
 					}
 				]
 			}

@@ -1,1 +1,19 @@
-Laravel 4 Blade Highlighter Version 1.1.0.
+Blade Highlighter for Laravel 4
+
+- Removed -
+@empty
+@endforelse
+@forelse
+
+- Added -
+{{{ }}}
+@choice()
+@end
+@extends
+@lang()
+@show
+@stop
+
+- Changed -
+@layout() -> @extends()
+@yield_section -> @show
