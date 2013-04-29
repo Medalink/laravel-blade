@@ -150,7 +150,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent)</string>
+			<string>\@(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
