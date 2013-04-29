@@ -7,6 +7,10 @@
         <string>blade</string>
         <string>blade.php</string>
     </array>
+    <key>foldingStartMarker</key>
+    <string>\@\b(section)\b(?=(|\s*|)\()</string>
+    <key>foldingStopMarker</key>
+    <string>\)(?!.*\))</string>
     <key>name</key>
     <string>Blade</string>
     <key>patterns</key>
@@ -495,7 +499,7 @@
             <key>name</key>
             <string>invalid.illegal.bad-angle-bracket.html</string>
         </dict>
-        
+
         <!-- Blade Start -->
         <dict>
             <key>include</key>
@@ -541,7 +545,7 @@
                     <key>include</key>
                     <string>#php</string>
                 </dict>
-                
+
                 <!-- Blade Start -->
                 <dict>
                     <key>include</key>
@@ -572,7 +576,7 @@
                     <string>#blade-extended-compiler-close-tags</string>
                 </dict>
                 <!-- Blade End -->
-                
+
                 <dict>
                     <key>include</key>
                     <string>#python</string>
@@ -610,7 +614,7 @@
                 </dict>
             </array>
         </dict>
-        
+
         <!-- Blade -->
         <key>blade-variable-tags</key>
         <dict>
@@ -883,7 +887,7 @@
             <key>name</key>
             <string>comment.block.blade</string>
         </dict>
-        
+
         <!-- Constants -->
         <key>blade-constants</key>
         <dict>
@@ -905,7 +909,7 @@
                 </dict>
             </array>
         </dict>
-        
+
         <!-- Operators -->
         <key>blade-operators</key>
         <dict>
@@ -996,7 +1000,7 @@
                 </dict>
             </array>
         </dict>
-        
+
         <!-- Strings -->
         <key>blade-strings</key>
         <dict>
@@ -1027,7 +1031,7 @@
                     <key>name</key>
                     <string>string.quoted.single.blade</string>
                 </dict>
-                
+
                 <!-- Double Quoted Strings -->
                 <dict>
                     <key>begin</key>
@@ -1055,7 +1059,7 @@
                 </dict>
             </array>
         </dict>
-        
+
         <!-- Arrays -->
         <key>blade-arrays</key>
         <dict>
@@ -1110,7 +1114,7 @@
             <key>name</key>
             <string>meta.array.blade</string>
         </dict>
-        
+
         <!-- Hashes -->
         <key>blade-hashes</key>
         <dict>
@@ -1157,7 +1161,7 @@
             <string>meta.hash.blade</string>
         </dict>
         <!-- Blade End -->
-        
+
         <key>php</key>
         <dict>
             <key>begin</key>
