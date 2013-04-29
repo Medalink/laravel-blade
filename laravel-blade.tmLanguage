@@ -9,6 +9,10 @@
 		<string>blade</string>
 		<string>blade.php</string>
 	</array>
+	<key>foldingStartMarker</key>
+	<string>\@\b(section)\b(?=(|\s*|)\()</string>
+	<key>foldingStopMarker</key>
+	<string>\)(?!.*\))</string>
 	<key>name</key>
 	<string>PHP - Laravel Blade</string>
 	<key>patterns</key>
