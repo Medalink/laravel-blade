@@ -78,7 +78,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@\b(if|elseif|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
+			<string>(\s{1}|^)\@\b(if|elseif|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -87,6 +87,11 @@
 					<string>support.constant.laravel-blade</string>
 				</dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.laravel-blade</string>
+				</dict>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.tag.laravel-blade</string>
@@ -116,7 +121,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@\b(.+)\b(?=(|\s*|)\()</string>
+			<string>(\s{1}|^)\@\b(.+)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -154,7 +159,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)</string>
+			<string>(\s{1}|^)\@\b(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -163,6 +168,11 @@
 					<string>support.constant.laravel-blade</string>
 				</dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.laravel-blade</string>
+				</dict>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.tag.laravel-blade</string>
@@ -184,7 +194,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\@\b(.+)\b(?=(|\s*|))</string>
+			<string>(\s{1}|^)\@\b([a-zA-Z_]+)\b(\s?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
