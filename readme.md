@@ -31,6 +31,6 @@ The following are a list of packages that conflict with Laravel Blade preventing
 
 ### Screenshots
 
-![Laravel Blade Highlighter](http://tge-studio.com/blade/laravel-blade-highlighter.png "Laravel Blade Highlighter")
+![Laravel Blade Highlighter](http://tge-studio.com/blade/bladehighlighter.png "Laravel Blade Highlighter")
 
-![Laravel Blade Highlighter 2](http://tge-studio.com/blade/laravel-blade-highlighter-more.png "Laravel Blade Highlighter 2")
+![Laravel Blade Highlighter 2](http://tge-studio.com/blade/bladehighlighter-more.png "Laravel Blade Highlighter 2")
