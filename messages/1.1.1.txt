@@ -1,0 +1,7 @@
+Blade Highlighter for Laravel 4
+
+- Added -
+@overwrite
+
+- Changed -
+Support for collapsing @section().
