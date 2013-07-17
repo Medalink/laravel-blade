@@ -8,14 +8,14 @@ This package adds syntax definitions for the [Laravel 4](http://www.laravel.com)
 
 Search for Laravel Blade and install it, it's just that simple.
 
+*For Laravel 3 please see the [laravel3](https://github.com/Medalink/laravel-blade/tree/laravel3) branch.*
+*You can also check out our [tags](https://github.com/Medalink/laravel-blade/tags) section for different Laravel versions.*
+
 ### Sublime Text 2 Manual Install
 
 * Create *Packages/laravel-blade*
 * Drop the laravel-blade.tmLanguage into your *Packages/laravel-blade* folder.
 * Restart Sublime Text 3.
-
-*For Laravel 3 please see the [laravel3](https://github.com/Medalink/laravel-blade/tree/laravel3) branch.*
-*You can also check out our [tags](https://github.com/Medalink/laravel-blade/tags) section for different Laravel versions.*
 
 #### Sublime Text 3 Manual Install
 
@@ -25,9 +25,9 @@ Search for Laravel Blade and install it, it's just that simple.
 
 #### Incompatible Plugins
 
-The following are a list of packages that conflict with Laravel Blade preventing it from correctly working.
+Below are third-party plugins for Sublime Text that may cause the Laravel Blade highlighter to malfunction.
 
-* [HTML for Sublime Text 2](https://github.com/mrmartineau/HTML5)
+* [HTML5 for Sublime Text 2](https://github.com/mrmartineau/HTML5)
 
 ### Screenshots
 
