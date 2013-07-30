@@ -3,10 +3,10 @@
 	"packages": [
 		{
 			"name": "Laravel Blade Highlighter",
-			"description": "Laravel Blade syntax highlighter support for Sublime Text.",
+			"description": "Laravel Blade syntax highlighter support for Sublime Text 2 & 3.",
 			"author": "Eric Percifield",
 			"homepage": "https://github.com/Medalink/laravel-blade",
-			"last_modified": "2013-04-26 16:43:35",
+			"last_modified": "2013-07-30 11:00:24",
 			"platforms": {
 				"*": [
 					{
