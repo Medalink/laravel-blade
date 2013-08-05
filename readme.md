@@ -8,6 +8,8 @@ This package adds syntax definitions for the [Laravel 4](http://www.laravel.com)
 
 Search for Laravel Blade and install it, it's just that simple.
 
+*Restart Sublime Text after you install this package.*
+
 *For Laravel 3 please see the [laravel3](https://github.com/Medalink/laravel-blade/tree/laravel3) branch.*
 *You can also check out our [tags](https://github.com/Medalink/laravel-blade/tags) section for different Laravel versions.*
 
