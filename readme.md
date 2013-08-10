@@ -17,7 +17,7 @@ Search for Laravel Blade and install it, it's just that simple.
 
 * Create *Packages/laravel-blade*
 * Drop the laravel-blade.tmLanguage into your *Packages/laravel-blade* folder.
-* Restart Sublime Text 3.
+* Restart Sublime Text 2.
 
 #### Sublime Text 3 Manual Install
 
