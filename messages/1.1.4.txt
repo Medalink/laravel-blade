@@ -1,4 +1,0 @@
-Blade Highlighter for Laravel 4
-
-- Added -
-Raw echo syntax: {!! ... !!}
