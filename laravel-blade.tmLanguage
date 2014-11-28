@@ -51,7 +51,8 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>support.constant.laravel-blade</string>
+					<!-- <string>support.constant.laravel-blade</string> -->
+					<string>meta.brace.curly.laravel-blade</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -63,7 +64,43 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>support.constant.laravel-blade</string>
+					<!-- <string>support.constant.laravel-blade</string> -->
+					<string>meta.brace.curly.laravel-blade</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>source.php.embedded.line.html</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#language</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{\!\!?-?</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<!-- <string>support.constant.laravel-blade</string> -->
+					<string>meta.brace.curly.laravel-blade</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Catches the remainder.</string>
+			<key>end</key>
+			<string>-?\!?\!\}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<!-- <string>support.constant.laravel-blade</string> -->
+					<string>meta.brace.curly.laravel-blade</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -111,7 +148,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(if|elseif|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
+			<string>(\s{0}|^)(\@)\b(if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -192,7 +229,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
+			<string>(\s{0}|^)(\@)\b(endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
