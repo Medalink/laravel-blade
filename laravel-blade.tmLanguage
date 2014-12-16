@@ -111,7 +111,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(if|elseif|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
+			<string>(\s{0}|^)(\@)\b(if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -192,7 +192,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(endif|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
+			<string>(\s{0}|^)(\@)\b(endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
