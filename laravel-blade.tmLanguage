@@ -45,7 +45,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\{\{\{?-?</string>
+			<string>\{(!!)|(\{\{\{?)-?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -57,7 +57,7 @@
 			<key>comment</key>
 			<string>Catches the remainder.</string>
 			<key>end</key>
-			<string>-?\}?\}\}</string>
+			<string>-?(\}?\}\})|(!!)\}</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
