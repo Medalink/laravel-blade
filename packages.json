@@ -12,9 +12,9 @@
 				{
 					"sublime_text": "*",
 					"platforms": ["windows", "osx", "linux"],
-					"version": "1.1.4",
-					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.1.4",
-					"date": "2014-01-21 10:50:00"
+					"version": "1.5.0",
+					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.5.0",
+					"date": "2015-01-27 14:54:00"
 				}
 			]
 		}
