@@ -1,14 +1,18 @@
-{{-- Single-line Comment --}}
-
-{{-- Multi-line
-Comment --}}
-
-{{-- Echo --}}
+{{-- Echo Data --}}
 Hello, {{ $name }}.
-
 The current UNIX timestamp is {{ time() }}.
 
-{{-- Echo: Escape Output --}}
+{{-- Echoing Data After Checking For Existence --}}
+{{ isset($name) ? $name : 'Default' }}
+{{ $name or 'Default' }}
+
+{{-- Displaying Raw Text With Curly Braces --}}
+@{{ This will not be processed by Blade }}
+
+{{-- Do not escape data --}}
+Hello, {!! $name !!}.
+
+{{-- Escape Data --}}
 Hello, {{{ $name }}}.
 
 {{-- Define Blade Layout --}}
@@ -16,7 +20,7 @@ Hello, {{{ $name }}}.
     <body>
         @section('sidebar')
             This is the master sidebar.
-        @show
+        @stop
 
         <div class="container">
             @yield('content')
@@ -28,24 +32,23 @@ Hello, {{{ $name }}}.
 @extends('layouts.master')
 
 @section('sidebar')
-    @parent
+
 
     <p>This is appended to the master sidebar.</p>
-@stop
-
-@section('sidebar')
-    @overwrite
-
-    <p>This replaces the master sidebar.</p>
 @stop
 
 @section('content')
     <p>This is my body content.</p>
 @stop
 
+{{-- --}}
+@yield('section', 'Default Content')
+
 {{-- If Statement --}}
-@if (count($records) > 0)
-    I have records!
+@if (count($records) === 1)
+    I have one record!
+@elseif (count($records) > 1)
+    I have multiple records!
 @else
     I don't have any records!
 @endif
@@ -63,19 +66,41 @@ Hello, {{{ $name }}}.
     <p>This is user {{ $user->id }}</p>
 @endforeach
 
+@forelse($users as $user)
+      <li>{{ $user->name }}</li>
+@empty
+      <p>No users</p>
+@endforelse
+
 @while (true)
     <p>I'm looping forever.</p>
 @endwhile
 
 {{-- Include --}}
 @include('view.name')
+@include('view.name', ['some' => 'data'])
 
-{{-- Language --}}
+{{-- Overwriting Sections --}}
+@extends('list.item.container')
+
+@section('list.item.content')
+    <p>This is an item of type {{ $item->type }}</p>
+@overwrite
+
+{{-- Displaying Language Lines --}}
 @lang('language.line')
 
-@choice('language.line', 1);
+@choice('language.line', 1)
 
-{{-- Custom --}}
+{{-- This comment will not be in the rendered HTML --}}
+{{--
+
+This comment will not be in the rendered HTML
+
+--}}
+
+{{-- Custom Control Structures --}}
 @custom
+
 @foo('bar', 'baz')
-    @indented
+    @datetime($var)
