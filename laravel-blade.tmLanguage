@@ -6,7 +6,6 @@
 	<string>Syntax highlighting support for the Laravel Blade markup.</string>
 	<key>fileTypes</key>
 	<array>
-		<string>blade</string>
 		<string>blade.php</string>
 	</array>
 	<key>foldingStartMarker</key>
