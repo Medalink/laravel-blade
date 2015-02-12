@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Comments</string>
 	<key>scope</key>
-	<string>text.html.laravel-blade</string>
+	<string>text.html.laravel-blade, text.html.laravel-blade source.php.embedded.line, text.html.laravel-blade comment.block.laravel-blade</string>
 	<key>settings</key>
 	<dict>
 		<key>shellVariables</key>
