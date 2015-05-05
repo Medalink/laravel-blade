@@ -24,6 +24,10 @@ Search for Laravel Blade and install it, it's just that simple.
 
 *Note: color may vary depending on theme. I use [Predawn](https://github.com/jamiewilson/predawn).*
 
+#### Compatible Laravel Extensions
+
+* [Blade Extensions Laravel Package](https://github.com/RobinRadic/blade-extensions)
+
 #### Incompatible Plugins
 
 Below are third-party plugins for Sublime Text that may cause the Laravel Blade highlighter to malfunction.

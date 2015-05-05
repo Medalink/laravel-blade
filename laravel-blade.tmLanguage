@@ -110,7 +110,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include)\b(?=(|\s*|)\()</string>
+			<string>(\s{0}|^)(\@)\b(debug|set|if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include|render|block)\b(?=(|\s*|)\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -191,7 +191,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\s{0}|^)(\@)\b(endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endsection|parent|overwrite)\b</string>
+			<string>(\s{0}|^)(\@)\b(endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endblock|endpartial|continue|break|endsection|parent|overwrite)\b</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -992,7 +992,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(break|c(ase|ontinue)|d(e(clare|fault)|ie|o)|e(lse(if)?|nd(declare|for(each)?|if|switch|while)|xit)|for(each)?|if|return|switch|use|while)\b</string>
+					<string>\b(continue|break|c(ase|ontinue)|d(e(clare|fault)|ie|o)|e(lse(if)?|nd(declare|for(each)?|if|switch|while)|xit)|for(each)?|if|return|switch|use|while)\b</string>
 					<key>name</key>
 					<string>keyword.control.php</string>
 				</dict>
