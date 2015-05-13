@@ -21,7 +21,7 @@
 				<string>TM_COMMENT_END</string>
 				<key>value</key>
 				<string> --}}</string>
-			</dict>      
+			</dict>
 			<dict>
 				<key>name</key>
 				<string>TM_COMMENT_START_2</string>
