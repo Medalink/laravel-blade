@@ -13,7 +13,7 @@
 					"sublime_text": "*",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.5.3",
-					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v1.5.3",
+					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.3",
 					"date": "2015-05-13 11:09:00"
 				}
 			]
