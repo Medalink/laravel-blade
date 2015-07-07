@@ -14,6 +14,12 @@ Hello, {!! $name !!}.
 
 {{-- Escape Data --}}
 Hello, {{{ $name }}}.
+<?php
+
+if ($var == true) {
+    return false;
+}
+?>
 
 {{-- Define Blade Layout --}}
 <html>

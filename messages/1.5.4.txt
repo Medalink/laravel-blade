@@ -1,0 +1,10 @@
+-- Blade Highlighter for Laravel 5 --
+
+This is a work in progress re-write of the syntax definitions for ST3.
+
+Please visit Github and leave a comment/issue with feedback.
+
+https://github.com/Medalink/laravel-blade
+
+Thanks!
+-Medalink

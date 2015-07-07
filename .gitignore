@@ -1,2 +1,3 @@
-*.sublime*
 .DS_Store
+laravel-blade.sublime-project
+laravel-blade.sublime-workspace
