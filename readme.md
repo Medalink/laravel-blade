@@ -20,11 +20,11 @@ Search for Laravel Blade and install it, it's just that simple.
 
 ### Yeah but, show me what it is?
 
-![blade-example](/screenshot.jpg?raw=true "blade-example")
+![blade-example](https://cloud.githubusercontent.com/assets/499192/8564960/52a7e57c-2551-11e5-8182-1f24a6d8d17a.jpg "blade-example")
 
 *[Predawn](https://github.com/jamiewilson/predawn).*
 
-![blade-example](/screenshot2.jpg?raw=true "blade-example-2")
+![blade-example](https://cloud.githubusercontent.com/assets/499192/8564966/68f19076-2551-11e5-9bc2-13d8b0915ffa.jpg "blade-example-2")
 
 *[Material Theme](https://github.com/equinusocio/material-theme).*
 
