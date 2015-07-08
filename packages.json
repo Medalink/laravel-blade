@@ -10,13 +10,6 @@
 			"labels": ["php", "laravel", "blade", "language syntax"],
 			"releases": [
 				{
-					"sublime_text": ">3081",
-					"platforms": ["windows", "osx", "linux"],
-					"version": "1.5.4",
-					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.4",
-					"date": "2015-07-08 12:08:00"
-				}
-				{
 					"sublime_text": "*",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.5.3",
