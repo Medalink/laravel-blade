@@ -1,5 +1,5 @@
 {
-	"schema_version": "2.0",
+	"schema_version": "3.0.0",
 	"packages": [
 		{
 			"name": "Laravel Blade Highlighter",
@@ -10,11 +10,18 @@
 			"labels": ["php", "laravel", "blade", "language syntax"],
 			"releases": [
 				{
-					"sublime_text": "*",
+					"sublime_text": "<=3083",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.5.3",
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.3",
 					"date": "2015-05-13 11:09:00"
+				}
+				{
+					"sublime_text": ">=3084",
+					"platforms": ["windows", "osx", "linux"],
+					"version": "1.5.4",
+					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.4",
+					"date": "2015-07-08 22:00:00"
 				}
 			]
 		}
