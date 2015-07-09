@@ -15,13 +15,13 @@
 					"version": "1.5.3",
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.3",
 					"date": "2015-05-13 11:09:00"
-				}
+				},
 				{
 					"sublime_text": ">=3084",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.5.4",
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.4",
-					"date": "2015-07-08 22:00:00"
+					"date": "2015-07-08 11:16:23"
 				}
 			]
 		}
