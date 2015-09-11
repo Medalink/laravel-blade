@@ -160,3 +160,13 @@ This comment will not be in the rendered HTML
 {{ $newvar }}
 
 @debug($somearr)
+
+@can('permission', $entity)
+You have permission!
+@endcan
+
+@can('permission', $entity)
+You have permission!
+@else
+You don't have permission!
+@endcan
