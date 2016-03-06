@@ -91,6 +91,20 @@ if ($var == true) {
     <p>This is an item of type {{ $item->type }}</p>
 @overwrite
 
+{{-- Stacks --}}
+
+{{-- Push a stack --}}
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+
+{{-- Render stack --}}
+<html>
+    <body>
+        @stack('scripts')
+    </body>
+</html>
+
 {{-- Displaying Language Lines --}}
 @lang('language.line')
 
