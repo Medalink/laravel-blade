@@ -40,7 +40,7 @@ contexts:
           push:
             - meta_scope: meta.embedded.line.php
             - meta_content_scope: source.php
-            - match: '\)(?!.*\))'
+            - match: '\)'
               pop: true
             - include: 'scope:source.php'
 
