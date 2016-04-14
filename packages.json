@@ -17,11 +17,18 @@
 					"date": "2015-05-13 11:09:00"
 				},
 				{
-					"sublime_text": ">=3084",
+					"sublime_text": "3084",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.5.6",
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.6",
 					"date": "2015-10-08 12:57:00"
+				},
+				{
+					"sublime_text": ">3084",
+					"platforms": ["windows", "osx", "linux"],
+					"version": "1.5.7",
+					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.5.7",
+					"date": "2016-04-14 17:44:00"
 				}
 			]
 		}
