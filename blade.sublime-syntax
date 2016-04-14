@@ -38,7 +38,7 @@ contexts:
             1: constant.other.inline-data.html
             2: constant.other.inline-data.html
           push:
-            - meta_scope: meta.embedded.line.php
+            - meta_scope: source.php
             - meta_content_scope: source.php
             - match: '\)'
               pop: true
@@ -49,7 +49,7 @@ contexts:
             0: entity.name.tag.block.any.html
             1: constant.other.inline-data.html
             2: constant.other.inline-data.html
-          pop: true
+          pop: false
 
         - match: '(\s{0}|^)(\@)\b(.+)\b(?=(|\s*|)\()'
           captures:
