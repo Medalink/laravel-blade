@@ -23,6 +23,15 @@ if ($var == true) {
 
 {{-- Define Blade Layout --}}
 <html>
+    <head>
+        <title>
+            @hasSection('title')
+                @yield('title') - App Name
+            @else
+                App Name
+            @endif
+        </title>
+    </head>
     <body>
         @section('sidebar')
             This is the master sidebar.
