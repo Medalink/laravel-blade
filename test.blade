@@ -119,6 +119,15 @@ This comment will not be in the rendered HTML
     Not Allowed
 @endcan
 
+{{-- Stacks --}}
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+
+<head>
+    @stack('scripts')
+</head>
+
 {{-- Custom Control Structures --}}
 @custom
 

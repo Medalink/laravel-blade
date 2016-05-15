@@ -185,6 +185,15 @@ You don't have permission!
     Not Allowed
 @endcan
 
+{{-- Stacks --}}
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+
+<head>
+    @stack('scripts')
+</head>
+
 {{-- Custom Control Structures --}}
 @custom
 
