@@ -108,6 +108,17 @@ This comment will not be in the rendered HTML
 
 --}}
 
+{{-- elsecan and elsecannot --}}
+@can ('show-post', $post)
+    Can Show
+@elsecan ('write-post', $post)
+    Can write
+@elsecannot ('delete-post', $post)
+    Not Allowed
+@else
+    Not Allowed
+@endcan
+
 {{-- Custom Control Structures --}}
 @custom
 
