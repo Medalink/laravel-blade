@@ -40,6 +40,8 @@ if ($var == true) {
         <div class="container">
             @yield('content')
         </div>
+
+        @stack('script')
     </body>
 </html>
 
@@ -53,6 +55,10 @@ if ($var == true) {
 @section('content')
     <p>This is my body content.</p>
 @stop
+
+@push('script')
+    <script>console.log('hooray!');</script>
+@endpush
 
 {{-- --}}
 @yield('section', 'Default Content')
