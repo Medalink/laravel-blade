@@ -32,7 +32,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(debug|set|if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include|render|block|can|inject|partial|hasSection)\b(?=(|\s*|)\()'
+        - match: '(\s{0}|^)(\@)\b(debug|set|if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|stack|push|include|render|block|can|inject|partial|hasSection)\b(?=(|\s*|)\()'
           captures:
             0: entity.name.tag.block.any.html
             1: constant.other.inline-data.html
@@ -44,7 +44,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(empty|endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endblock|endpartial|continue|break|endsection|parent|overwrite|endcan|append)\b'
+        - match: '(\s{0}|^)(\@)\b(empty|endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endblock|endpartial|continue|break|endsection|endpush|parent|overwrite|endcan|append)\b'
           captures:
             0: entity.name.tag.block.any.html
             1: constant.other.inline-data.html
