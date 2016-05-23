@@ -113,12 +113,6 @@ This comment will not be in the rendered HTML
 This comment will not be in the rendered HTML
  --}}
 
-{{-- Custom Control Structures --}}
-@custom
-
-@foo('bar', 'baz')
-    @datetime($var)
-
 {{-- Blade Extensions Compatibility --}}
 {{-- https://github.com/RobinRadic/blade-extensions --}}
 @foreach($stuff as $key => $val)
@@ -179,3 +173,29 @@ You have permission!
 @else
 You don't have permission!
 @endcan
+
+{{-- elsecan and elsecannot --}}
+@can ('show-post', $post)
+    Can Show
+@elsecan ('write-post', $post)
+    Can write
+@elsecannot ('delete-post', $post)
+    Not Allowed
+@else
+    Not Allowed
+@endcan
+
+{{-- Stacks --}}
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+
+<head>
+    @stack('scripts')
+</head>
+
+{{-- Custom Control Structures --}}
+@custom
+
+@foo('bar', 'baz')
+    @datetime($var)

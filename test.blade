@@ -108,6 +108,26 @@ This comment will not be in the rendered HTML
 
 --}}
 
+{{-- elsecan and elsecannot --}}
+@can ('show-post', $post)
+    Can Show
+@elsecan ('write-post', $post)
+    Can write
+@elsecannot ('delete-post', $post)
+    Not Allowed
+@else
+    Not Allowed
+@endcan
+
+{{-- Stacks --}}
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush
+
+<head>
+    @stack('scripts')
+</head>
+
 {{-- Custom Control Structures --}}
 @custom
 
