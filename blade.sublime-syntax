@@ -40,7 +40,7 @@ contexts:
           push:
             - meta_scope: source.php
             - meta_content_scope: source.php
-            - match: '(?!.*\))'
+            - match: '(?<=\))'
               pop: true
             - include: 'scope:source.php'
 
@@ -51,14 +51,14 @@ contexts:
             2: constant.other.inline-data.html
           pop: false
 
-        - match: '(\s{0}|^)(\@)\b(.+)\b(?=(|\s*|)\()'
+        - match: '(\s{0}|^)(\@)\b([a-zA-Z_]+)\b(?=(|\s*|)\()'
           captures:
             0: constant.other.inline-data.html
             2: constant.other.inline-data.html
           push:
             - meta_scope: custom.compiler.blade.php
             - meta_content_scope: source.php
-            - match: '\)'
+            - match: '(?<=\))'
               pop: true
             - include: 'scope:source.php'
 
