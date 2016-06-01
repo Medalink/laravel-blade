@@ -81,27 +81,25 @@ contexts:
               pop: true
 
         - match: '<\?(?i:php|=)?(?![^?]*\?>)'
-          captures:
-            0: punctuation.section.embedded.begin.php
-          push:
+          scope: punctuation.section.embedded.begin.php
+          push: 
+            - meta_content_scope: source.php
             - meta_scope: meta.embedded.block.php
-            - meta_content_scope: source.php
-            - match: (\?)>
-              captures:
-                0: punctuation.section.embedded.end.php
-                1: source.php
-              pop: true
             - include: 'scope:source.php'
+          with_prototype:
+          - match: (?=\?>)(\?>)
+            captures:
+              0: punctuation.section.embedded.end.php
+            pop: true
 
-        - match: <\?(?i:php|=)?
-          captures:
-            0: punctuation.section.embedded.begin.php
-          push:
-            - meta_scope: meta.embedded.line.php
+        - match: '<\?(?i:php|=)?'
+          scope: punctuation.section.embedded.begin.php
+          push: 
             - meta_content_scope: source.php
-            - match: (\?)>
-              captures:
-                0: punctuation.section.embedded.end.php
-                1: source.php
-              pop: true
+            - meta_scope: meta.embedded.line.php
             - include: 'scope:source.php'
+          with_prototype:
+          - match: (?=\?>)(\?>)
+            captures:
+              0: punctuation.section.embedded.end.php
+            pop: true

@@ -199,3 +199,12 @@ You don't have permission!
 
 @foo('bar', 'baz')
     @datetime($var)
+
+<?php echo $name; ?>
+<?= $name; ?>
+
+<?php 
+    foreach (range(1, 10) as $number) {
+        echo $number;
+    }
+?>
