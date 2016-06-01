@@ -14,11 +14,14 @@ Hello, {!! $name !!}.
 
 {{-- Escape Data --}}
 Hello, {{{ $name }}}.
-<?php
 
-if ($var == true) {
-    return false;
-}
+<?php echo $name; ?>
+<?= $name; ?>
+
+<?php 
+    foreach (range(1, 10) as $number) {
+        echo $number;
+    }
 ?>
 
 {{-- Define Blade Layout --}}
@@ -54,7 +57,7 @@ if ($var == true) {
     <p>This is my body content.</p>
 @stop
 
-{{-- --}}
+{{-- yield section --}}
 @yield('section', 'Default Content')
 
 {{-- If Statement --}}
@@ -80,9 +83,9 @@ if ($var == true) {
 @endforeach
 
 @forelse($users as $user)
-      <li>{{ $user->name }}</li>
+    <li>{{ $user->name }}</li>
 @empty
-      <p>No users</p>
+    <p>No users</p>
 @endforelse
 
 @while (true)
@@ -127,13 +130,17 @@ This comment will not be in the rendered HTML
     {{ $loop->length }}      {{-- int --}}
 
     @foreach($other as $name => $age)
+
         {{ $loop->parent->odd }}
+
         @foreach($friends as $foo => $bar)
+
             {{ $loop->parent->index }}
             {{ $loop->parent->parentLoop->index }}
-        @endforeach
-    @endforeach
 
+        @endforeach
+
+    @endforeach
 
     @section('content')
         @partial('partials.danger-panel')
@@ -153,9 +160,14 @@ This comment will not be in the rendered HTML
         @endblock
     @endpartial
 
-    @break
+    {{-- with arguments --}}
+    @continue($user->type == 1)
+    @break($user->number == 5)
 
+    {{-- without arguments --}}
+    @break
     @continue
+
 @endforeach
 
 @set($now, new DateTime('now'))
@@ -165,13 +177,13 @@ This comment will not be in the rendered HTML
 @debug($somearr)
 
 @can('permission', $entity)
-You have permission!
+    You have permission!
 @endcan
 
 @can('permission', $entity)
-You have permission!
+    You have permission!
 @else
-You don't have permission!
+    You don't have permission!
 @endcan
 
 {{-- elsecan and elsecannot --}}
@@ -199,12 +211,3 @@ You don't have permission!
 
 @foo('bar', 'baz')
     @datetime($var)
-
-<?php echo $name; ?>
-<?= $name; ?>
-
-<?php 
-    foreach (range(1, 10) as $number) {
-        echo $number;
-    }
-?>
