@@ -38,6 +38,6 @@ Search for Laravel Blade and install it, it's just that simple.
 * Follow the manual installation process by cloning the repo into your packages directory.
 * Restart Sublime Text.
 * Open up the '[install-dir]/Packages/laravel-blade' folder into a new Sublime Text project.
-* Open up the laravel-blade.tmLanguage file and make changes.
+* Open up the blade.tmLanguage file and make changes.
 * I have provided a test.blade file that holds most of the common uses for testing the regex, use this to verify your changes before and after you make them to ensure the changes you make do not break anything.
 * Send a pull request with a single change per request.
