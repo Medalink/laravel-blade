@@ -5,7 +5,7 @@
     <key>name</key>
     <string>Comments</string>
     <key>scope</key>
-    <string>text.html.basic, source.php</string>
+    <string>text.html.basic, source.blade.php</string>
     <key>settings</key>
     <dict>
         <key>shellVariables</key>
