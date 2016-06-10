@@ -66,10 +66,7 @@ contexts:
           captures:
             0: constant.other.inline-data.html
             2: constant.other.inline-data.html
-          push:
-            - meta_scope: custom.compiler.blade.php
-            - match: '(?<=[a-zA-Z_])'
-              pop: true
+          pop: false
 
         - match: '@\{\{\{?-?'
           captures:
