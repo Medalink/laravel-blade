@@ -5,7 +5,7 @@
     <key>name</key>
     <string>Comments</string>
     <key>scope</key>
-    <string>text.blade, source.blade.php, meta.embedded.block.blade.php, meta.embedded.line.blade.php, comment.block.blade.html</string>
+    <string>text.blade, source.blade.php, meta.embedded.block.blade.php, meta.embedded.line.blade.php, comment.block.blade.html, source.js.embedded.html</string>
     <key>settings</key>
     <dict>
         <key>shellVariables</key>
