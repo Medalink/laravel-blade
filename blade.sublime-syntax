@@ -8,6 +8,7 @@ contexts:
     - match: ''
       push:
         - include: 'scope:text.html.basic'
+        - meta_scope: text.html.blade
           pop: true
       with_prototype:
 
