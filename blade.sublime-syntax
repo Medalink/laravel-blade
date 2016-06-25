@@ -27,7 +27,7 @@ contexts:
             0: entity.name.tag.block.any.html
           push:
             - meta_scope: meta.embedded.line.blade.php
-            - meta_content_scope: source.blade.php
+            - meta_content_scope: source.php.blade
             - match: '-?(\}?\}\})|(!!)\}'
               captures:
                 0: entity.name.tag.block.any.html
@@ -42,12 +42,13 @@ contexts:
             2: constant.other.inline-data.html
           push:
             - meta_scope: custom.compiler.blade.php
-            - meta_content_scope: source.blade.php
+            - meta_content_scope: source.php.blade
             - match: '(?<=\))'
               pop: true
             - include: 'scope:source.php'
 
         - match: '(\s{0}|^)(\@)\b(empty|endif|endforelse|endforeach|endfor|endwhile|else|endunless|show|stop|endblock|endpartial|continue|break|endsection|parent|overwrite|endcan|append|endpush)\b'
+          scope: custom.compiler.blade.php
           captures:
             0: entity.name.tag.block.any.html
             1: constant.other.inline-data.html
@@ -60,12 +61,13 @@ contexts:
             2: constant.other.inline-data.html
           push:
             - meta_scope: custom.compiler.blade.php
-            - meta_content_scope: source.blade.php
+            - meta_content_scope: source.php.blade
             - match: '(?<=\))'
               pop: true
             - include: 'scope:source.php'
 
         - match: '(\s{0}|^)(\@)\b([a-zA-Z_]+)\b(\s?)\b'
+          scope: custom.compiler.blade.php
           captures:
             0: constant.other.inline-data.html
             2: constant.other.inline-data.html
@@ -86,7 +88,7 @@ contexts:
         - match: '<\?(?i:php|=)?(?![^?]*\?>)'
           scope: punctuation.section.embedded.begin.php
           push: 
-            - meta_content_scope: source.blade.php
+            - meta_content_scope: source.php
             - meta_scope: meta.embedded.block.blade.php
             - include: 'scope:source.php'
           with_prototype:
@@ -98,7 +100,7 @@ contexts:
         - match: '<\?(?i:php|=)?'
           scope: punctuation.section.embedded.begin.php
           push: 
-            - meta_content_scope: source.blade.php
+            - meta_content_scope: source.php.blade
             - meta_scope: meta.embedded.line.blade.php
             - include: 'scope:source.php'
           with_prototype:
