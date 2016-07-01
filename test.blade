@@ -170,11 +170,90 @@ This comment will not be in the rendered HTML
 
 @endforeach
 
-@set($now, new DateTime('now'))
-@set('newvar', 'value')
 {{ $newvar }}
+@set('newvar', 'value')
+@set($now, new DateTime('now'))
+@set('myArr', ['my' => 'arr'])
+@set('myArr2', array('my' => 'arr'))
+
+@unset('newvar')
+@unset($newvar)
 
 @debug($somearr)
+
+// xdebug_break breakpoints (configurable) to debug compiled views. Sweet? YES!
+@breakpoint
+
+@markdown
+# Some markdown code
+** with some bold text too **
+@endmarkdown
+
+@section('content')
+    @embed('components.panel', ['type' => 'danger', 'items' => ['first', 'second', 'third'] ])
+        @section('content')
+            <p>Hello World!</p>
+        @stop
+    @endembed
+@stop
+
+@macrodef('divider', $class = 'divider', $role = 'seperator')
+    <?php return "<li role='{$role}' class='{$class}'></li>"; ?>
+@endmacro
+
+<div class="container">
+    <h1>Title</h1>
+
+    @macro("divider")
+
+    <p>Paragraph</p>
+</div>
+
+@embed('blade-ext::dropdown', ['button' => true ])
+    @section('label', 'Choose')
+    @section('items')
+        @macro('item', 'Action')
+        @macro('item', 'Another Action')
+        @macro('item', 'Something else here')
+        @macro('item', 'Separated link')
+    @stop
+@endembed
+
+<script>
+    @minify('js')
+
+    var exampleJavascript = {
+        this: 'that',
+        foo: 'bar',
+        doit: function(){
+            console.log('yesss');
+        }
+    };
+
+    @endminify
+</script>
+
+<style type="text/css">
+    @minify('css')
+
+    a.bg-primary:hover,
+    a.bg-primary:focus {
+      background-color: #286090;
+    }
+
+    .bg-success {
+      background-color: #dff0d8;
+    }
+
+    a.bg-success:hover,
+    a.bg-success:focus {
+      background-color: #c1e2b3;
+    }
+
+    @endminify
+</style>
+
+{{----------------------------------------}}
 
 @can('permission', $entity)
     You have permission!
