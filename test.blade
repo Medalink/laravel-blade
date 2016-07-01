@@ -253,7 +253,7 @@ This comment will not be in the rendered HTML
     @endminify
 </style>
 
-{{----------------------------------------}}
+{{-- Authorization (ACL) --}}
 
 @can('permission', $entity)
     You have permission!
@@ -265,7 +265,10 @@ This comment will not be in the rendered HTML
     You don't have permission!
 @endcan
 
-{{-- elsecan and elsecannot --}}
+@cannot ('update', [ 'post' => $post ])
+    breeze
+@endcannot
+
 @can ('show-post', $post)
     Can Show
 @elsecan ('write-post', $post)
