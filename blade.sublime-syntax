@@ -14,26 +14,63 @@ contexts:
 
         - match: '{{--'
           captures:
-            0: punctuation.definition.comment.html
+            0: punctuation.definition.comment.begin.blade
           push:
-            - meta_scope: comment.block.blade.html
+            - meta_scope: comment.block.html.blade
             - match: '--}}'
+              scope: punctuation.definition.comment.end.blade
               pop: true
             - match: "--"
-              scope: invalid.illegal.bad-comments-or-CDATA.html
+              scope: invalid.illegal.bad-comments-or-CDATA.html.blade
 
         - match: '\{(!!)|(\{\{\{?)-?'
           captures:
-            0: entity.name.tag.block.any.html
+            0: punctuation.section.embedded.begin.blade
           push:
-            - meta_scope: meta.embedded.line.blade.php
+            - meta_scope: entity.name.tag.blade
             - meta_content_scope: source.php.blade
             - match: '-?(\}?\}\})|(!!)\}'
               captures:
-                0: entity.name.tag.block.any.html
-                1: entity.name.tag.block.any.html
+                0: punctuation.section.embedded.end.blade
+                1: punctuation.section.embedded.end.blade
               pop: true
             - include: 'scope:source.php'
+
+        - match: '@\{\{\{?-?'
+          captures:
+            0: punctuation.section.embedded.ignore.begin.blade
+          push:
+            - meta_scope: 'scope:text.html.basic'
+            - meta_content_scope: 'scope:text.html.basic'
+            - match: '-?\}?\}\}'
+              captures:
+                0: punctuation.section.embedded.ignore.end.blade
+                1: punctuation.section.embedded.ignore.end.blade
+              pop: true
+
+        - match: '<\?(?i:php|=)?(?![^?]*\?>)'
+          scope: punctuation.section.embedded.begin.php
+          push:
+            - meta_content_scope: source.php
+            - meta_scope: meta.embedded.block.blade.php
+            - include: 'scope:source.php'
+          with_prototype:
+          - match: (?=\?>)(\?>)
+            captures:
+              0: punctuation.section.embedded.end.php
+            pop: true
+
+        - match: '<\?(?i:php|=)?'
+          scope: punctuation.section.embedded.begin.php
+          push:
+            - meta_content_scope: source.php.blade
+            - meta_scope: meta.embedded.line.blade.php
+            - include: 'scope:source.php'
+          with_prototype:
+          - match: (?=\?>)(\?>)
+            captures:
+              0: punctuation.section.embedded.end.php
+            pop: true
 
         - match: '(\s{0}|^)(\@)\b(debug|embed|macrodef|set|unset|if|elseif|forelse|foreach|for|while|extends|unless|each|yield|lang|choice|section|include|render|block|can|cannot|inject|partial|hasSection|elsecan|elsecannot|stack|push|layout|continue|break|minify|macro)\b(?=(|\s*|)\()'
           captures:
@@ -72,39 +109,3 @@ contexts:
             0: constant.other.inline-data.html
             2: constant.other.inline-data.html
           pop: false
-
-        - match: '@\{\{\{?-?'
-          captures:
-            0: entity.name.tag.block.any.html
-          push:
-            - meta_scope: 'scope:text.html.basic'
-            - meta_content_scope: 'scope:text.html.basic'
-            - match: '-?\}?\}\}'
-              captures:
-                0: entity.name.tag.block.any.html
-                1: entity.name.tag.block.any.html
-              pop: true
-
-        - match: '<\?(?i:php|=)?(?![^?]*\?>)'
-          scope: punctuation.section.embedded.begin.php
-          push: 
-            - meta_content_scope: source.php
-            - meta_scope: meta.embedded.block.blade.php
-            - include: 'scope:source.php'
-          with_prototype:
-          - match: (?=\?>)(\?>)
-            captures:
-              0: punctuation.section.embedded.end.php
-            pop: true
-
-        - match: '<\?(?i:php|=)?'
-          scope: punctuation.section.embedded.begin.php
-          push: 
-            - meta_content_scope: source.php.blade
-            - meta_scope: meta.embedded.line.blade.php
-            - include: 'scope:source.php'
-          with_prototype:
-          - match: (?=\?>)(\?>)
-            captures:
-              0: punctuation.section.embedded.end.php
-            pop: true
