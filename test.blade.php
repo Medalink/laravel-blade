@@ -18,7 +18,7 @@ Hello, {{{ $name }}}.
 <?php echo $name; ?>
 <?= $name; ?>
 
-<?php 
+<?php
     foreach (range(1, 10) as $number) {
         echo $number;
     }
@@ -293,3 +293,26 @@ This comment will not be in the rendered HTML
 
 @foo('bar', 'baz')
     @datetime($var)
+
+---
+
+{{-- Envoyer directives --}}
+
+@setup
+    $now = new DateTime();
+
+    $environment = isset($env) ? $env : "testing";
+@endsetup
+
+@servers(['web' => 'user@192.168.1.1'])
+
+@task('foo')
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask
+
+@after
+    @hipchat('token', 'room', 'Envoy')
+    @slack('hook', 'channel', 'message')
+@endafter
