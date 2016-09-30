@@ -24,6 +24,10 @@ Hello, {{{ $name }}}.
     }
 ?>
 
+@php
+    echo "Hello World!";
+@endphp
+
 {{-- Define Blade Layout --}}
 <html>
     <head>
