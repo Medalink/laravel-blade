@@ -24,9 +24,17 @@ Hello, {{{ $name }}}.
     }
 ?>
 
-@php
-    echo "Hello World!";
-@endphp
+@include('header')
+
+<div class="container">
+    @php
+        foreach (range(1, 10) as $number) {
+            echo $number;
+        }
+    @endphp
+</div>
+
+@include('footer')
 
 {{-- Define Blade Layout --}}
 <html>

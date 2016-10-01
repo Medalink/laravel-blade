@@ -48,22 +48,22 @@ contexts:
                 1: punctuation.section.embedded.ignore.end.blade
               pop: true
 
-        - match: '((@)(php)|<\?(?i:php|=)?)(?![^?]*\?>)'
+        - match: '((\s{0}|^)(@)(php)|<\?(?i:php|=)?)(?![^?]*\?>)'
           scope: punctuation.section.embedded.begin.php
           captures:
               0: punctuation.section.embedded.begin.php
-              2: constant.other.inline-data.html
-              3: entity.name.tag.block.any.html
+              3: constant.other.inline-data.html
+              4: entity.name.tag.block.any.html
           push:
             - meta_content_scope: source.php
             - meta_scope: meta.embedded.block.blade.php
             - include: 'scope:source.php'
           with_prototype:
-          - match: (?=\?>|@endphp)(\?>|(@)(endphp))
+          - match: (?=\?>|(\s{0}|^)(@)(endphp))(\?>|(\s{0}|^)(@)(endphp))
             captures:
               0: punctuation.section.embedded.end.php
-              2: constant.other.inline-data.html
-              3: entity.name.tag.block.any.html
+              6: constant.other.inline-data.html
+              7: entity.name.tag.block.any.html
             pop: true
 
         - match: '<\?(?i:php|=)?'
