@@ -328,3 +328,8 @@ This comment will not be in the rendered HTML
     @hipchat('token', 'room', 'Envoy')
     @slack('hook', 'channel', 'message')
 @endafter
+
+@story('deploy')
+    git
+    composer install
+@endstory
