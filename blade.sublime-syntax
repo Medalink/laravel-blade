@@ -100,7 +100,7 @@ contexts:
 
         - match: '(\s{0}|^)(\@)\b([a-zA-Z_]+)\b(?=(|\s*|)\()'
           captures:
-            0: constant.other.inline-data.html
+            0: support.function
             2: constant.other.inline-data.html
           push:
             - meta_scope: custom.compiler.blade.php
@@ -112,6 +112,6 @@ contexts:
         - match: '(\s{0}|^)(\@)\b([a-zA-Z_]+)\b(\s?)\b'
           scope: custom.compiler.blade.php
           captures:
-            0: constant.other.inline-data.html
+            0: support.function
             2: constant.other.inline-data.html
           pop: false
