@@ -16,7 +16,7 @@ This package adds syntax definitions for the [Laravel 4 & 5](http://www.laravel.
 
 ### Sublime Text Manual Install
 
-1 Download or clone this repository into [install-dir]/Packages/laravel-blade
+1. Download or clone this repository into [install-dir]/Packages/laravel-blade
 2. Restart Sublime Text.
 3. Reopen any ```.blade``` files.
 4. Enjoy :)
