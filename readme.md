@@ -6,17 +6,20 @@ This package adds syntax definitions for the [Laravel 4 & 5](http://www.laravel.
 
 ### How to install w/[Sublime Package Control](http://wbond.net/sublime_packages/package_control)
 
-Search for Laravel Blade and install it, it's just that simple.
-
-*Restart Sublime Text after you install this package.*
+1. Search for Laravel Blade and install it.
+2. Restart Sublime Text.
+3. Reopen any ```.blade``` files.
+4. Enjoy :)
 
 *For Laravel 3 please see the [laravel3](https://github.com/Medalink/laravel-blade/tree/laravel3) branch.*
 *You can also check out our [tags](https://github.com/Medalink/laravel-blade/tags) section for different Laravel versions.*
 
 ### Sublime Text Manual Install
 
-* Download or clone this repository into [install-dir]/Packages/laravel-blade
-* Restart Sublime Text.
+1 Download or clone this repository into [install-dir]/Packages/laravel-blade
+2. Restart Sublime Text.
+3. Reopen any ```.blade``` files.
+4. Enjoy :)
 
 ### Yeah but, show me what it is?
 
