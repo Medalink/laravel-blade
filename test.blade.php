@@ -356,4 +356,6 @@ This comment will not be in the rendered HTML
             This is my sidebar text.
         @endcomponent
     </div>
+
+    @includeWhen(Auth::user(), 'nav.user')
 @endcomponent
