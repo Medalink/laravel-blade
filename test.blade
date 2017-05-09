@@ -359,3 +359,9 @@ This comment will not be in the rendered HTML
 
     @includeWhen(Auth::user(), 'nav.user')
 @endcomponent
+
+@verbatim
+    <div class="container">
+        Hello, {{ name }}.
+    </div>
+@endverbatim
