@@ -1,0 +1,3 @@
+messages/* linguist-documentation
+*.blade linguist-documentation
+*.blade.php linguist-documentation
