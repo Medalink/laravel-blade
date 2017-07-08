@@ -362,6 +362,19 @@ This comment will not be in the rendered HTML
 
 @verbatim
     <div class="container">
-        Hello, {{ name }}.
+        Hello, {{ $name }}.
     </div>
 @endverbatim
+
+@switch($char)
+    @case('A')
+        <p>A</p>
+    @break
+
+    @case('B')
+        <p>B</p>
+    @break
+
+    @default
+        <p>Default</p>
+@endswitch
