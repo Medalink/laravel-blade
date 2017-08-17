@@ -87,6 +87,11 @@ Hello, {{{ $name }}}.
     I don't have any records!
 @endif
 
+<ul class="list @if (count($records) === 1) extra-class @endif">
+    <li>This is the first item</li>
+    <li>This is the second item</li>
+</ul>
+
 @unless (Auth::check())
     You are not signed in.
 @endunless
