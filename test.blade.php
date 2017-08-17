@@ -26,6 +26,9 @@ Hello, {{{ $name }}}.
 
 @include('header')
 
+{{-- Service injection --}}
+@inject('metrics', 'App\Services\MetricsService')
+
 {{-- PHP open/close tags --}}
 <div class="container">
     @php
@@ -92,6 +95,10 @@ Hello, {{{ $name }}}.
     <li>This is the second item</li>
 </ul>
 
+@isset($name)
+    Hello, {{ $name }}.
+@endisset
+
 @unless (Auth::check())
     You are not signed in.
 @endunless
@@ -118,6 +125,7 @@ Hello, {{{ $name }}}.
 {{-- Include --}}
 @include('view.name')
 @include('view.name', ['some' => 'data'])
+@includeIf('view.name', ['some' => 'data'])
 
 {{-- Overwriting Sections --}}
 @extends('list.item.container')
