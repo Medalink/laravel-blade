@@ -391,3 +391,17 @@ This comment will not be in the rendered HTML
     @default
         <p>Default</p>
 @endswitch
+
+{{-- Complex conditional --}}
+@if(($x == true) && ($y == false)) 
+    <a>foo</a>
+@endif
+
+{{-- Single line if statement --}}
+@if($foo === true) <p>Text</p> @endif
+
+{{-- Quoted blade directive matching --}}
+<p class="first-class @if($x==true) second-class @endif">Text</p>
+
+{{-- Complex conditional inline --}}
+<p class="first-class @if(($x == true) && ($y == "yes")) second-class @endif">Text</p>

@@ -78,6 +78,18 @@ contexts:
               0: punctuation.section.embedded.end.php
             pop: true
 
+        - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|debug|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\(\()'
+          captures:
+            0: punctuation.section.embedded.php
+            2: constant.other.inline-data.html
+            3: entity.name.tag.block.any.html
+          push:
+            - meta_scope: custom.compiler.blade.php
+            - meta_content_scope: source.php.blade
+            - match: '(?<=\)\))'
+              pop: true
+            - include: 'scope:source.php'
+
         - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|debug|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\()'
           captures:
             0: punctuation.section.embedded.php
