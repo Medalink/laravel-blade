@@ -26,6 +26,9 @@ Hello, {{{ $name }}}.
 
 @include('header')
 
+{{-- Service injection --}}
+@inject('metrics', 'App\Services\MetricsService')
+
 {{-- PHP open/close tags --}}
 <div class="container">
     @php
@@ -87,6 +90,15 @@ Hello, {{{ $name }}}.
     I don't have any records!
 @endif
 
+<ul class="list @if (count($records) === 1) extra-class @endif">
+    <li>This is the first item</li>
+    <li>This is the second item</li>
+</ul>
+
+@isset($name)
+    Hello, {{ $name }}.
+@endisset
+
 @unless (Auth::check())
     You are not signed in.
 @endunless
@@ -113,6 +125,7 @@ Hello, {{{ $name }}}.
 {{-- Include --}}
 @include('view.name')
 @include('view.name', ['some' => 'data'])
+@includeIf('view.name', ['some' => 'data'])
 
 {{-- Overwriting Sections --}}
 @extends('list.item.container')
@@ -378,3 +391,17 @@ This comment will not be in the rendered HTML
     @default
         <p>Default</p>
 @endswitch
+
+{{-- Complex conditional --}}
+@if(($x == true) && ($y == false)) 
+    <a>foo</a>
+@endif
+
+{{-- Single line if statement --}}
+@if($foo === true) <p>Text</p> @endif
+
+{{-- Quoted blade directive matching --}}
+<p class="first-class @if($x==true) second-class @endif">Text</p>
+
+{{-- Complex conditional inline --}}
+<p class="first-class @if(($x == true) && ($y == "yes")) second-class @endif">Text</p>
