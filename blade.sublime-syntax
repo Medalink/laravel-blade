@@ -69,7 +69,6 @@ contexts:
           push:
             - meta_content_scope: source.php
             - meta_scope: meta.embedded.block.blade.php
-            - include: 'scope:source.php'
           with_prototype:
           - match: (?=\?>|(\s{0}|^)(@)(endphp))(\?>|(\s{0}|^)(@)(endphp))
             captures:
@@ -77,6 +76,19 @@ contexts:
               6: constant.other.inline-data.html
               7: entity.name.tag.block.any.html
             pop: true
+          - include: 'scope:source.php'
+
+        - match: '<\?(?i:php|=)?'
+          scope: punctuation.section.embedded.begin.php
+          push:
+            - meta_content_scope: source.php.blade
+            - meta_scope: meta.embedded.line.blade.php
+          with_prototype:
+          - match: (?=\?>)(\?>)
+            captures:
+              0: punctuation.section.embedded.end.php
+            pop: true
+          - include: 'scope:source.php'
 
         - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|debug|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\(\()'
           captures:
