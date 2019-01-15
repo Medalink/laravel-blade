@@ -405,3 +405,9 @@ This comment will not be in the rendered HTML
 
 {{-- Complex conditional inline --}}
 <p class="first-class @if(($x == true) && ($y == "yes")) second-class @endif">Text</p>
+
+{{-- Helpers --}}
+@csrf
+@dd('Compile the "dd" statements into valid PHP.')
+@dump('Compile the "dump" statements into valid PHP')
+@method('post')
