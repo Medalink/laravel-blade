@@ -90,7 +90,7 @@ contexts:
             pop: true
           - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|debug|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\(\()'
+        - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|dd|debug|dump|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|method|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\(\()'
           captures:
             0: punctuation.section.embedded.php
             2: constant.other.inline-data.html
@@ -102,7 +102,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|debug|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\()'
+        - match: '(\s{0}|^)(\@)\b(acfrepeater|auth|block|break|can|cannot|choice|case|component|continue|dd|debug|dump|each|elsecan|elsecannot|elseif|embed|extends|for|foreach|forelse|guest|hasSection|hipchat|if|isset|include|includeIf|includeWhen|inject|lang|layout|macro|macrodef|method|minify|partial|php|push|render|section|servers|set|slack|slot|stack|story|switch|task|unless|unset|while|wpposts|yield)\b(?=(|\s*|)\()'
           captures:
             0: punctuation.section.embedded.php
             2: constant.other.inline-data.html
@@ -114,7 +114,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(acfend|after|append|auth|break|breakpoint|continue|default|else|empty|endswitch|endafter|endauth|endblock|endcan|endcannot|endcomponent|endembed|endempty|endfor|endforeach|endforelse|endguest|endif|endisset|endmacro|endmarkdown|endminify|endpartial|endpush|endsection|endsetup|endslot|endstory|endtask|endunless|endwhile|guest|markdown|overwrite|parent|setup|show|stop|verbatim|endverbatim|wpempty|wpend|wpquery)\b'
+        - match: '(\s{0}|^)(\@)\b(acfend|after|append|auth|break|breakpoint|continue|csrf|default|else|empty|endswitch|endafter|endauth|endblock|endcan|endcannot|endcomponent|endembed|endempty|endfor|endforeach|endforelse|endguest|endif|endisset|endmacro|endmarkdown|endminify|endpartial|endpush|endsection|endsetup|endslot|endstory|endtask|endunless|endwhile|guest|markdown|overwrite|parent|setup|show|stop|verbatim|endverbatim|wpempty|wpend|wpquery)\b'
           scope: custom.compiler.blade.php
           captures:
             0: punctuation.section.embedded.php
