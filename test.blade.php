@@ -411,3 +411,7 @@ This comment will not be in the rendered HTML
 @dd('Compile the "dd" statements into valid PHP.')
 @dump('Compile the "dump" statements into valid PHP')
 @method('post')
+
+{{-- Validation Errors --}}
+@error('title')
+@enderror
