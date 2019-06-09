@@ -41,6 +41,8 @@ Hello, {{{ $name }}}.
 {{-- Inline PHP --}}
 <div class="container">
     @php(custom_function())
+    @php($bool = $var ?? false)
+    @php($bool = $bool ?: true)
 </div>
 
 @include('footer')

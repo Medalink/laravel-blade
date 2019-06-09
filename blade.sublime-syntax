@@ -59,8 +59,8 @@ contexts:
                 0: punctuation.section.embedded.end.blade
               pop: true
             - include: 'scope:source.php'
-            
-        - match: '((\s{0}|^)(@)(php)(?![^?]*\(*\))|<\?(?i:php|=)?)(?![^?]*\?>)'
+
+        - match: '((\s{0}|^)(@)(php)(?!.*\(*\))|<\?(?i:php|=)?)(?![^?]*\?>)'
           scope: punctuation.section.embedded.begin.php
           captures:
               0: punctuation.section.embedded.begin.php
