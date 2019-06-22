@@ -310,6 +310,12 @@ This comment will not be in the rendered HTML
     Not Allowed
 @endcan
 
+@canany (['show-post', 'write-post'])
+    Can Show or write
+@elsecanany (['update-post', 'delete-post'])
+    Can update or delete
+@endcanany
+
 {{-- Stacks --}}
 @push('scripts')
     <script src="/example.js"></script>
