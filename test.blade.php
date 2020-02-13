@@ -101,6 +101,10 @@ Hello, {{{ $name }}}.
     Hello, {{ $name }}.
 @endisset
 
+@empty($name)
+    Hello, {{ $name }}.
+@endempty
+
 @unless (Auth::check())
     You are not signed in.
 @endunless
@@ -401,7 +405,7 @@ This comment will not be in the rendered HTML
 @endswitch
 
 {{-- Complex conditional --}}
-@if(($x == true) && ($y == false)) 
+@if(($x == true) && ($y == false))
     <a>foo</a>
 @endif
 
