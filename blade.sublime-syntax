@@ -120,7 +120,6 @@ contexts:
             0: punctuation.section.embedded.php
             2: constant.other.inline-data.html
             3: entity.name.tag.block.any.html
-          pop: false
 
         - match: '(\s{0}|^)(\@)\b([a-zA-Z_]+)\b(?=(|\s*|)\()'
           captures:
@@ -138,4 +137,3 @@ contexts:
           captures:
             0: support.function
             2: constant.other.inline-data.html
-          pop: false
