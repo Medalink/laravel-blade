@@ -1,8 +1,8 @@
 ## Laravel Blade Highlighter
 
-This package adds syntax definitions for the [Laravel 4 & 5](http://www.laravel.com) Blade engine.
+This package adds syntax definitions for the [Laravel](http://www.laravel.com) Blade engine.
 
-*Works with Sublime Text 3, for older versions use an older release.*
+*Works with various Sublime Text verions, for older or specific versions use an older or a specific release.*
 
 ### How to install w/[Sublime Package Control](http://wbond.net/sublime_packages/package_control)
 
@@ -10,9 +10,6 @@ This package adds syntax definitions for the [Laravel 4 & 5](http://www.laravel.
 2. Restart Sublime Text.
 3. Reopen any ```.blade``` files.
 4. Enjoy :)
-
-*For Laravel 3 please see the [laravel3](https://github.com/Medalink/laravel-blade/tree/laravel3) branch.*
-*You can also check out our [tags](https://github.com/Medalink/laravel-blade/tags) section for different Laravel versions.*
 
 ### Sublime Text Manual Install
 
