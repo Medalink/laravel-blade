@@ -2,7 +2,7 @@
 
 This package adds syntax definitions for the [Laravel](http://www.laravel.com) Blade engine.
 
-*Works with various Sublime Text verions, for older/specific versions use older/specific release.*
+*Works with various Sublime Text version, for older/specific versions use older/specific release.*
 
 ### How to install w/[Sublime Package Control](http://wbond.net/sublime_packages/package_control)
 
