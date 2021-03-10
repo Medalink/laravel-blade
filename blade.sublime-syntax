@@ -137,3 +137,9 @@ contexts:
           captures:
             0: support.function
             2: constant.other.inline-data.html
+
+        - match: '(livewire)(:[a-zA-Z\-._]*)\s'
+          captures:
+            1: meta.tag.inline.form.html entity.name.tag.inline.form.html
+            2: meta.tag.custom.html meta.attribute-with-value.html entity.other.attribute-name.html
+          pop: true
