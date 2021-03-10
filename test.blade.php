@@ -432,3 +432,8 @@ This comment will not be in the rendered HTML
 @livewireStyles
 @livewireScripts
 @livewire('show-contact', ['contact' => $contact])
+<livewire:show-contact :contact="$competition" key="contact" />
+
+{{-- Laravel 7 - Component tags --}}
+<x-component for="abc"></x-component>
+<x-component.foo.bar for="abc"></x-component.foo.bar>
