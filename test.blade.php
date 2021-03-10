@@ -432,3 +432,4 @@ This comment will not be in the rendered HTML
 @livewireStyles
 @livewireScripts
 @livewire('show-contact', ['contact' => $contact])
+<livewire:show-contact :contact="$competition" key="contact" />
