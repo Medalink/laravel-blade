@@ -432,3 +432,12 @@ This comment will not be in the rendered HTML
 @livewireStyles
 @livewireScripts
 @livewire('show-contact', ['contact' => $contact])
+
+{{-- environment --}}
+@production
+    In Production
+@endproduction
+
+@env('staging')
+    The application is running in "staging"...
+@endenv
