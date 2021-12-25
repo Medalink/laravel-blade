@@ -331,6 +331,12 @@ This comment will not be in the rendered HTML
     @stack('scripts')
 </head>
 
+@once
+    @push('scripts')
+        <script src="/example.js"></script>>
+    @endpush
+@endonce
+
 {{-- Custom Control Structures --}}
 @custom
 

@@ -114,7 +114,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\@)\b(acfend|after|append|auth|break|breakpoint|continue|csrf|default|else|empty|endswitch|endafter|endauth|endblock|endcan|endcannot|endcanany|endcomponent|endembed|endempty|enderror|endfor|endforeach|endforelse|endguest|endif|endisset|endempty|endmacro|endmarkdown|endminify|endpartial|endpush|endsection|endsetup|endslot|endstory|endtask|endunless|endwhile|guest|markdown|overwrite|parent|setup|show|stop|verbatim|endverbatim|wpempty|wpend|wpquery|livewireStyles|livewireScripts|endenv|production|endproduction)\b'
+        - match: '(\s{0}|^)(\@)\b(acfend|after|append|auth|break|breakpoint|continue|csrf|default|else|empty|endswitch|endafter|endauth|endblock|endcan|endcannot|endcanany|endcomponent|endembed|endempty|enderror|endfor|endforeach|endforelse|endguest|endif|endisset|endempty|endmacro|endmarkdown|endminify|endpartial|endpush|endsection|endsetup|endslot|endstory|endtask|endunless|endwhile|guest|markdown|overwrite|parent|setup|show|stop|verbatim|endverbatim|wpempty|wpend|wpquery|livewireStyles|livewireScripts|endenv|production|endproduction|once|endonce)\b'
           scope: custom.compiler.blade.php
           captures:
             0: punctuation.section.embedded.php
