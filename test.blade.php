@@ -439,7 +439,7 @@ This comment will not be in the rendered HTML
 @livewireScripts
 @livewire('show-contact', ['contact' => $contact])
 
-{{-- environment --}}
+{{-- Environment Directives --}}
 @production
     In Production
 @endproduction
@@ -447,3 +447,9 @@ This comment will not be in the rendered HTML
 @env('staging')
     The application is running in "staging"...
 @endenv
+
+{{-- Conditional Classes --}}
+<span @class(['font-bold', 'mt-4', 'ml-2' => true, 'mr-2' => false])></span>
+
+{{-- Rendering JSON --}}
+@js($data, JSON_FORCE_OBJECT, 256)
