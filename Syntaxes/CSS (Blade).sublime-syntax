@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+name: CSS (Blade)
+scope: source.css.blade
+version: 2
+
+extends: Packages/PHP/CSS (PHP).sublime-syntax
+
+file_extensions:
+  - blade.css
+
+contexts:
+
+  main:
+    # exclude prototype to give normal at-rules
+    # precedence over blade directives
+    - meta_prepend: true
+    - meta_include_prototype: false
+
+  prototype:
+    - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-embedded
+
+  at-other:
+    - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-embedded
+
+  string-content:
+    - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-interpolations

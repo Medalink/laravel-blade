@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+# This hidden syntax is included into quoted strings
+# to properly handle {{ echo statements with 'quoted strings' }}.
+scope: source.js.blade.embedded.string.quoted.single
+version: 2
+hidden: true
+
+extends: JavaScript (Blade).sublime-syntax
+
+contexts:
+  prototype:
+    - meta_prepend: true
+    - match: (?=')
+      pop: 1

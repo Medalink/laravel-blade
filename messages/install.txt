@@ -1,5 +1,1 @@
-Laravel Blade Highlighter
-
-This package adds syntax definitions for the Laravel 4 & 5 Blade engine.
-
-Works with Sublime Text 3.
+The package provides syntax definitions for Laravel Blade engine.

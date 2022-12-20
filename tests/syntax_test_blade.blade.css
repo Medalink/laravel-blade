@@ -1,0 +1,39 @@
+/* SYNTAX TEST "CSS (Blade).sublime-syntax" */
+
+   @if(true)
+/* ^^^ meta.embedded.blade source.blade meta.directive.blade */
+/*    ^^^^^^ meta.embedded.blade source.blade meta.directive.arguments.blade */
+/*          ^ - meta.embedded.blade source.blade meta.directive */
+/* ^^^ keyword.control.directive.blade */
+/*    ^ punctuation.section.arguments.begin.blade */
+/*     ^^^^ source.php.embedded.blade constant.language.boolean.php */
+/*         ^ punctuation.section.arguments.end.blade */
+
+   @media (min-width: 768px) { }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.media.css */
+/* ^^^^^^ keyword.control.directive.css */
+
+   @endif
+/* ^^^^^^ meta.embedded.blade source.blade meta.directive.blade */
+/*       ^ - meta.embedded.blade source.blade meta.directive */
+/* ^^^^^^ keyword.control.directive.blade */
+
+.my-{{ $class }} {
+/*  ^^^^^^^^^^^^ meta.selector.css meta.interpolation.blade */
+/*  ^^ punctuation.section.interpolation.begin.blade - source.php */
+/*    ^^^^^^^^ source.php.embedded.blade */
+/*            ^^ punctuation.section.interpolation.end.blade - source.php */
+    color: {{ $color }};
+/*         ^^^^^^^^^^^^ meta.property-value.css meta.interpolation.blade */
+/*         ^^ punctuation.section.interpolation.begin.blade - source.php */
+/*           ^^^^^^^^ source.php.embedded.blade */
+/*                   ^^ punctuation.section.interpolation.end.blade - source.php */
+
+    background-color: "#{{ $hex_color }}";
+/*                    ^^ meta.property-value.css meta.string.css string.quoted.double.css */
+/*                      ^^^^^^^^^^^^^^^^ meta.property-value.css meta.string.css meta.interpolation.blade */
+/*                                      ^ meta.property-value.css meta.string.css string.quoted.double.css */
+/*                      ^^ punctuation.section.interpolation.begin.blade - source.php */
+/*                        ^^^^^^^^^^^^ source.php.embedded.blade */
+/*                                    ^^ punctuation.section.interpolation.end.blade - source.php */
+}

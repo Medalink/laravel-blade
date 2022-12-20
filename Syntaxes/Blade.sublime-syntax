@@ -1,0 +1,170 @@
+%YAML 1.2
+---
+# This hidden syntax is not meant for direct use, but as a library for
+# Blade template directives and echo statements.
+#
+# Note: These contexts are not directly included into `HTML (Blade)` because
+#       syntax cache of `CSS (Blade)` and `JavaScript (Blade)` would be
+#       significant larger then for some unknown reason. (Tested with ST 4146)
+#
+# https://laravel.com/docs/9.x
+# http://www.sublimetext.com/docs/syntax.html
+name: Blade
+scope: source.blade
+version: 2
+hidden: true
+
+variables:
+
+  directive_keywords: |-
+    (?x: acfrepeater | auth | block | break | can | canany | cannot | case
+    | choice | class | component | continue | dd | debug | dump | each | elsecan
+    | elsecanany | elsecannot | elseif | embed | empty | env | error | extends
+    | for | foreach | forelse | guest | hasSection | hipchat | if | include
+    | includeFirst | includeIf | includeUnless | includeWhen | inject | isset
+    | js | lang | layout | livewire | macro | macrodef | method | minify
+    | partial | php | push | render | section | servers | set | slack | slot
+    | stack | story | switch | task | unless | unset | while | wpposts | yield )
+
+  bare_directive_keywords: |-
+    (?x: acfend | after | append | auth | break | breakpoint | continue | csrf
+    | default | else | empty | endafter | endauth | endblock | endcan | endcanany
+    | endcannot | endcomponent | endembed | endempty | endempty | endenv
+    | enderror | endfor | endforeach | endforelse | endguest | endif | endisset
+    | endmacro | endmarkdown | endminify | endonce | endpartial | endproduction
+    | endpush | endsection | endsetup | endslot | endstory | endswitch | endtask
+    | endunless | endverbatim | endwhile | guest | livewireScripts
+    | livewireStyles | markdown | once | overwrite | parent | production | setup
+    | show | stop | verbatim | wpempty | wpend | wpquery )
+
+contexts:
+
+  main:
+    - include: blade-embedded
+
+###[ BLADE ]###################################################################
+
+  blade-embedded:
+    - include: blade-comments
+    - include: blade-escaped-echos
+    - include: blade-unescaped-echos
+    - include: blade-raw-echos
+    - include: blade-php-directives
+    - include: blade-other-directives
+
+###[ BLADE INTERPOLATIONS ]####################################################
+
+  blade-interpolations:
+    - match: (?={{2,3}-?|{!!|@[[:alpha:]{])
+      push: blade-interpolation-body
+
+  blade-interpolation-body:
+    - clear_scopes: 1
+    - meta_include_prototype: false
+    - include: blade-embedded
+    - include: immediately-pop
+
+###[ BLADE COMMENTS ]##########################################################
+
+  blade-comments:
+    - match: '{{--'
+      scope: punctuation.definition.comment.begin.blade
+      push: blade-comment-body
+
+  blade-comment-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.embedded.blade comment.block.blade
+    - match: '--}}'
+      scope: punctuation.definition.comment.end.blade
+      pop: true
+    - match: --
+      scope: invalid.illegal.bad-comments.blade
+
+###[ BLADE ECHO ]##############################################################
+
+  blade-escaped-echos:
+    - match: '{{2,3}-?'
+      scope: meta.interpolation.blade punctuation.section.interpolation.begin.blade
+      embed: Packages/PHP/PHP Source.sublime-syntax
+      embed_scope: meta.interpolation.blade source.php.embedded.blade
+      escape: '-?}{2,3}'
+      escape_captures:
+        0: meta.interpolation.blade punctuation.section.interpolation.end.blade
+
+  blade-unescaped-echos:
+    - match: '{!!'
+      scope: meta.interpolation.blade punctuation.section.interpolation.begin.blade
+      embed: Packages/PHP/PHP Source.sublime-syntax
+      embed_scope: meta.interpolation.blade source.php.embedded.blade
+      escape: '!!}'
+      escape_captures:
+        0: meta.interpolation.blade punctuation.section.interpolation.end.blade
+
+  blade-raw-echos:
+    - match: '@{{2,3}-?'
+      scope: punctuation.section.interpolation.begin.blade
+      push: blade-raw-echo-body
+
+  blade-raw-echo-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.interpolation.blade
+    - meta_content_scope: text.plain.embedded.blade
+    - match: '-?}{2,3}'
+      scope: punctuation.section.interpolation.end.blade
+      pop: true
+
+###[ BLADE PHP DIRECTIVES ]####################################################
+
+  blade-php-directives:
+    - match: (@)php\b(?!\s*\(.*\))
+      scope: meta.embedded.blade source.blade meta.directive.blade keyword.control.directive.blade
+      captures:
+          1: punctuation.definition.keyword.blade
+      embed: Packages/PHP/PHP Source.sublime-syntax
+      embed_scope: meta.embedded.blade source.php.embedded.blade
+      escape: (@)endphp\b
+      escape_captures:
+        0: meta.embedded.blade source.blade meta.directive.blade keyword.control.directive.blade
+        1: punctuation.definition.keyword.blade
+
+###[ BLADE DIRECTIVES ]########################################################
+
+  blade-other-directives:
+    - match: (@){{directive_keywords}}(?=\s*\()
+      scope: meta.embedded.blade source.blade meta.directive.blade keyword.control.directive.blade
+      captures:
+        1: punctuation.definition.keyword.blade
+      push: blade-directive-argument-list
+    - match: (@){{bare_directive_keywords}}\b
+      scope: meta.embedded.blade source.blade meta.directive.blade keyword.control.directive.blade
+      captures:
+        1: punctuation.definition.keyword.blade
+    - match: (@)[a-zA-Z_]+\b
+      scope: meta.embedded.blade source.blade meta.directive.blade variable.function.blade
+      captures:
+        1: punctuation.definition.keyword.blade
+      push: blade-directive-argument-list
+
+  blade-directive-argument-list:
+    - meta_include_prototype: false
+    - meta_content_scope: meta.embedded.blade source.blade meta.directive.blade
+    - match: \(
+      scope: punctuation.section.arguments.begin.blade
+      set: blade-directive-argument-list-body
+    - match: (?!\s*\()
+      pop: 1
+
+  blade-directive-argument-list-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.embedded.blade source.blade meta.directive.arguments.blade
+    - meta_content_scope: source.php.embedded.blade
+    - match: \)
+      scope: punctuation.section.arguments.end.blade
+      pop: 1
+    - include: Packages/PHP/PHP Source.sublime-syntax#expressions
+
+###[ PROTOTYPES ]##############################################################
+
+  immediately-pop:
+    - match: ''
+      pop: 1

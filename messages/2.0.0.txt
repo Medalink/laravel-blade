@@ -1,0 +1,33 @@
+2.0.0
+-----
+
+This release provides a re-written Laravel Blade syntax for Sublime Text 4137+,
+which extends rewritten PHP syntax and makes use of latest syntax engine features.
+
+It resolves issues #191 and #194 by embedding extended JS/CSS syntaxes.
+
+ATTENTION
+---------
+
+This release comes with a number of breaking changes
+which may require some adjustments for snippets or plugins to continue working!
+
+1. Primary syntax definition is `HTML (Blade)`.
+
+   The name follows a common naming scheme being used for various template syntaxes
+   and expresses HTML to be the base syntax being extended by Blade template code.
+
+   This release also ships with `CSS (Blade)` and `JavaScript (Blade)`, which can
+   be used to highlight standalone CSS/JS templates, if ever needed.
+
+2. The already existing `text.html.blade` is now the main scope replacing `text.blade`.
+
+   This is also to expresses Blade being based on HTML.
+
+3. Scope names have completely been overhauled/refactored to follow current guidelines
+   and to express semantic meaning of certain expressions more accurately.
+
+Please close and re-open all open Blade templates to re-assign new syntax definitions!
+
+---
+Bug Tracker: https://github.com/Medalink/laravel-blade

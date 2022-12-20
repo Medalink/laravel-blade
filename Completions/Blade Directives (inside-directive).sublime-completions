@@ -1,0 +1,602 @@
+{
+	// Use this file in case `@` sign was already entered manually and a keyword
+	// is being typed in order to avoid adding duplicate `@` when commiting completion.
+	"scope": "meta.directive.blade - source.php",
+	"completions": [
+		{
+			"trigger": "acfrepeater",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "acfend",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "after",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "append",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "auth",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "block",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "break",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "breakpoint",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "can",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "canany",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "cannot",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "case",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "choice",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "class",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "component",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "continue",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "csrf",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "dd",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "debug",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "default",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "dump",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "each",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "else",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "elsecan",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "elsecanany",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "elsecannot",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "elseif",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "embed",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "empty",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endafter",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endauth",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endblock",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endcan",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endcanany",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endcannot",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endcomponent",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endembed",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endempty",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endenv",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "enderror",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endfor",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endforeach",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endforelse",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endguest",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endif",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endisset",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endmacro",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endmarkdown",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endminify",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endonce",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endpartial",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endproduction",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endpush",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endsection",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endsetup",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endslot",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endstory",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endswitch",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endtask",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endunless",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endverbatim",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "endwhile",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "env",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "error",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "extends",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "for",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "foreach",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "forelse",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "guest",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "hasSection",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "hipchat",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "if",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "include",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "includeFirst",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "includeIf",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "includeUnless",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "includeWhen",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "inject",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "isset",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "js",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "lang",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "layout",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "livewire",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "livewireScripts",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "livewireStyles",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "macro",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "macrodef",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "markdown",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "method",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "minify",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "once",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "overwrite",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "parent",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "partial",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "php",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "production",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "push",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "render",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "section",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "servers",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "set",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "setup",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "show",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "slack",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "slot",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "stack",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "stop",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "story",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "switch",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "task",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "unless",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "unset",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "verbatim",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "while",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "wpempty",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "wpend",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "wpposts",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "wpquery",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "yield",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+	],
+}
