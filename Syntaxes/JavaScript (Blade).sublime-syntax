@@ -1,0 +1,20 @@
+%YAML 1.2
+---
+name: JavaScript (Blade)
+scope: source.js.blade
+version: 2
+
+extends: Packages/PHP/JavaScript (PHP).sublime-syntax
+
+file_extensions:
+  - blade.js
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-embedded
+
+  string-content:
+    - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-interpolations
