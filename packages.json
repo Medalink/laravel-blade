@@ -30,7 +30,7 @@
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/1.6.18",
 					"date": "2020-05-28 13:50:00"
 				},
-								{
+				{
 					"sublime_text": ">=4137",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "2.0.0",
