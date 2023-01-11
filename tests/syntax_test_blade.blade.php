@@ -1192,3 +1192,11 @@
 {{--                                      ^ punctuation.section.group.end.js --}}
 {{--                                       ^ punctuation.definition.string.end.html --}}
 {{--                                        ^ meta.tag punctuation.definition.tag.end.html --}}
+
+    <button @click="alert('Hello World!')">Say Hi</button>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag --}}
+{{--        ^^^^^^ meta.embedded.blade source.blade meta.directive.blade variable.function.blade --}}
+{{--              ^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.html --}}
+{{--              ^ punctuation.separator.key-value.html --}}
+{{--               ^^^^^^^^^^^^^^^^^^^^^^^ meta.string.html string.quoted.double.html --}}
+{{--                                      ^ punctuation.definition.tag.end.html --}}

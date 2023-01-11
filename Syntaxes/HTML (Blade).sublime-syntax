@@ -83,6 +83,15 @@ contexts:
         3: source.css.embedded.html
         4: comment.block.html punctuation.definition.comment.end.html
 
+  tag-generic-attribute:
+    # fixes: https://github.com/Medalink/laravel-blade/issues/196
+    - meta_prepend: true
+    - match: =
+      scope: punctuation.separator.key-value.html
+      push:
+        - tag-generic-attribute-meta
+        - tag-generic-attribute-value
+
   tag-event-attribute-value:
     # note: only needed for backward compatibility with ST4143
     - meta_include_prototype: false
