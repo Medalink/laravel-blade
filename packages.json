@@ -33,7 +33,7 @@
 				{
 					"sublime_text": ">=4137",
 					"platforms": ["windows", "osx", "linux"],
-					"version": "2.0.0",
+					"version": "2.0.1",
 					"url": "https://nodeload.github.com/Medalink/laravel-blade/zip/v2.0.1",
 					"date": "2022-12-24 12:08:00"
 				}
