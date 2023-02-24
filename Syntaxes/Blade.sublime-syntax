@@ -20,7 +20,7 @@ variables:
     (?x: acfrepeater | auth | block | break | can | canany | cannot | case
     | choice | class | component | continue | dd | debug | dump | each | elsecan
     | elsecanany | elsecannot | elseif | embed | empty | env | error | extends
-    | for | foreach | forelse | guest | hasSection | hipchat | if | include
+    | feature | for | foreach | forelse | guest | hasSection | hipchat | if | include
     | includeFirst | includeIf | includeUnless | includeWhen | inject | isset
     | js | lang | layout | livewire | macro | macrodef | method | minify
     | partial | php | push | render | section | servers | set | slack | slot
@@ -30,7 +30,7 @@ variables:
     (?x: acfend | after | append | auth | break | breakpoint | continue | csrf
     | default | else | empty | endafter | endauth | endblock | endcan | endcanany
     | endcannot | endcomponent | endembed | endempty | endempty | endenv
-    | enderror | endfor | endforeach | endforelse | endguest | endif | endisset
+    | enderror | endfeature | endfor | endforeach | endforelse | endguest | endif | endisset
     | endmacro | endmarkdown | endminify | endonce | endpartial | endproduction
     | endpush | endsection | endsetup | endslot | endstory | endswitch | endtask
     | endunless | endverbatim | endwhile | guest | livewireScripts
