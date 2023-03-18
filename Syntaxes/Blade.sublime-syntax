@@ -23,7 +23,7 @@ variables:
     | feature | for | foreach | forelse | guest | hasSection | hipchat | if | include
     | includeFirst | includeIf | includeUnless | includeWhen | inject | isset
     | js | lang | layout | livewire | macro | macrodef | method | minify
-    | partial | php | push | render | section | servers | set | slack | slot
+    | partial | php | props | push | render | section | servers | set | slack | slot
     | stack | story | switch | task | unless | unset | while | wpposts | yield )
 
   bare_directive_keywords: |-
